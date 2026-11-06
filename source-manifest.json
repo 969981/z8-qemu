@@ -1,6 +1,7 @@
 {
   "files": {
     ".gitattributes": "095c42e5d9e137db21cb8b8cf3181ae1a25c95678918cc9c1f97bf9852f75cea",
+    ".github/workflows/main-source-release.yml": "757861c17ad072021dae0271c81b869be270dff263e5930446b4f7a06f17fcb1",
     ".github/workflows/ci.yml": "16754534ea8be3ff98ae24ea4859079225f8cac6fe77bb09fa2120ad740cacda",
     ".gitignore": "fe278ac049be1b5efd6120758130224ea6fd7bb094ee71cd4a9ede7420b9dd33",
     "CONTRIBUTING.md": "d754f74e092db7b7544d8ba8ceacec9dc99d00896493f8f6595e801c0ee9b29f",
