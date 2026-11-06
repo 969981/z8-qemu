@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 50
     env:
-      FW_DIR: ${{ runner.temp }}/nikon-stock
-      TOOL_DIR: ${{ runner.temp }}/nikon-keytool
-      REPORT_DIR: ${{ runner.temp }}/z8-report
+      FW_DIR: /tmp/z8-firmware-${{ github.run_id }}
+      TOOL_DIR: /tmp/z8-keytool-${{ github.run_id }}
+      REPORT_DIR: /tmp/z8-report-${{ github.run_id }}
     steps:
       - name: Checkout C3.12 study branch
         uses: actions/checkout@v4
@@ -108,9 +108,9 @@ jobs:
         with:
           name: z8-c312-crc-and-diff
           path: |
-            ${{ runner.temp }}/z8-report/*.log
-            ${{ runner.temp }}/z8-report/*.json
-            ${{ runner.temp }}/z8-report/*.md
+            /tmp/z8-report-${{ github.run_id }}/*.log
+            /tmp/z8-report-${{ github.run_id }}/*.json
+            /tmp/z8-report-${{ github.run_id }}/*.md
           if-no-files-found: warn
           retention-days: 14
 
