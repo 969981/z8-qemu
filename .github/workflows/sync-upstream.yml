@@ -1,0 +1,65 @@
+name: Sync WonderLantern upstream
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: z8-qemu-upstream-sync
+  cancel-in-progress: false
+
+jobs:
+  fetch-upstream:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout local repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Fetch upstream and update tracking branch
+        id: track
+        shell: bash
+        run: |
+          set -euo pipefail
+          git remote add upstream https://github.com/WonderLantern/z8-qemu.git
+          git fetch --no-tags upstream main
+          git fetch --no-tags origin main upstream-main
+          old_sha="$(git rev-parse refs/remotes/origin/upstream-main)"
+          new_sha="$(git rev-parse refs/remotes/upstream/main)"
+          echo "old_sha=$old_sha" >> "$GITHUB_OUTPUT"
+          echo "new_sha=$new_sha" >> "$GITHUB_OUTPUT"
+          if [[ "$old_sha" == "$new_sha" ]]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Only the dedicated upstream-main ref is rewritten, never main or 3.12.
+          git push --force-with-lease="refs/heads/upstream-main:$old_sha" \
+            origin "$new_sha:refs/heads/upstream-main"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Open a review PR when upstream advances
+        if: steps.track.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          existing="$(gh pr list --head upstream-main --base main --state open --json number --jq 'length')"
+          if [[ "$existing" != '0' ]]; then
+            echo 'An upstream sync PR is already open.'
+            exit 0
+          fi
+          if ! gh pr create \
+            --head upstream-main --base main \
+            --title 'chore: sync WonderLantern/z8-qemu upstream' \
+            --body 'Automated upstream tracking update. Review changes before merging. Does not modify the 3.12 research branch.'; then
+            echo 'PR creation unavailable; upstream-main was updated. Compare branches manually.'
+          fi
