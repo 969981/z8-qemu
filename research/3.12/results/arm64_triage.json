@@ -1,0 +1,770 @@
+{
+  "status": "static-only-not-function-verified",
+  "eg_3_11_sha": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+  "eg_3_12_sha": "ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867",
+  "provisional_load_base": "0x40160000",
+  "known_qemu_3_11_sites": {
+    "boot_entry": {
+      "c3_11_runtime_pc": "0x40160000",
+      "eg_relative_offset": "0x0",
+      "same_64_bytes": true,
+      "different_bytes_in_64": 0,
+      "first_4_byte_instruction_old": "msr daifset, #0xf",
+      "first_4_byte_instruction_new": "msr daifset, #0xf"
+    },
+    "adc_ready": {
+      "c3_11_runtime_pc": "0x4033db98",
+      "eg_relative_offset": "0x1ddb98",
+      "same_64_bytes": true,
+      "different_bytes_in_64": 0,
+      "first_4_byte_instruction_old": "bl #0x402e652c",
+      "first_4_byte_instruction_new": "bl #0x402e652c"
+    },
+    "power_status": {
+      "c3_11_runtime_pc": "0x40d57a90",
+      "eg_relative_offset": "0xbf7a90",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 1,
+      "first_4_byte_instruction_old": "sub sp, sp, #0xa0",
+      "first_4_byte_instruction_new": "sub sp, sp, #0xa0"
+    },
+    "system_power_event": {
+      "c3_11_runtime_pc": "0x40d67260",
+      "eg_relative_offset": "0xc07260",
+      "same_64_bytes": true,
+      "different_bytes_in_64": 0,
+      "first_4_byte_instruction_old": "str x20, [sp, #-0x20]!",
+      "first_4_byte_instruction_new": "str x20, [sp, #-0x20]!"
+    },
+    "battery_callback": {
+      "c3_11_runtime_pc": "0x41181504",
+      "eg_relative_offset": "0x1021504",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 59,
+      "first_4_byte_instruction_old": "b #0x4118150c",
+      "first_4_byte_instruction_new": "add sp, sp, #0x30"
+    },
+    "lens_controller_reply": {
+      "c3_11_runtime_pc": "0x4106e690",
+      "eg_relative_offset": "0xf0e690",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 57,
+      "first_4_byte_instruction_old": "stp x21, x20, [sp, #-0x20]!",
+      "first_4_byte_instruction_new": "tbz w0, #0, #0x4106e6ac"
+    },
+    "menu_event_1": {
+      "c3_11_runtime_pc": "0x40d66034",
+      "eg_relative_offset": "0xc06034",
+      "same_64_bytes": true,
+      "different_bytes_in_64": 0,
+      "first_4_byte_instruction_old": "ldr w20, [x19]",
+      "first_4_byte_instruction_new": "ldr w20, [x19]"
+    },
+    "menu_event_2": {
+      "c3_11_runtime_pc": "0x40d55da0",
+      "eg_relative_offset": "0xbf5da0",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 1,
+      "first_4_byte_instruction_old": "sub sp, sp, #0x90",
+      "first_4_byte_instruction_new": "sub sp, sp, #0x90"
+    },
+    "menu_event_3": {
+      "c3_11_runtime_pc": "0x40d5eb7c",
+      "eg_relative_offset": "0xbfeb7c",
+      "same_64_bytes": true,
+      "different_bytes_in_64": 0,
+      "first_4_byte_instruction_old": "ldr w8, [x0, #0x230]",
+      "first_4_byte_instruction_new": "ldr w8, [x0, #0x230]"
+    },
+    "half_shutter_1": {
+      "c3_11_runtime_pc": "0x40d271e4",
+      "eg_relative_offset": "0xbc71e4",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 1,
+      "first_4_byte_instruction_old": "stp x19, x30, [sp, #-0x10]!",
+      "first_4_byte_instruction_new": "stp x19, x30, [sp, #-0x10]!"
+    },
+    "half_shutter_2": {
+      "c3_11_runtime_pc": "0x40d26d7c",
+      "eg_relative_offset": "0xbc6d7c",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 1,
+      "first_4_byte_instruction_old": "orr w9, w9, #1",
+      "first_4_byte_instruction_new": "orr w9, w9, #1"
+    },
+    "half_shutter_3": {
+      "c3_11_runtime_pc": "0x40d3003c",
+      "eg_relative_offset": "0xbd003c",
+      "same_64_bytes": true,
+      "different_bytes_in_64": 0,
+      "first_4_byte_instruction_old": "mov w0, #4",
+      "first_4_byte_instruction_new": "mov w0, #4"
+    },
+    "framebuffer_event": {
+      "c3_11_runtime_pc": "0x40fac9bc",
+      "eg_relative_offset": "0xe4c9bc",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 61,
+      "first_4_byte_instruction_old": "bl #0x40ec4644",
+      "first_4_byte_instruction_new": "movk x1, #0x29c, lsl #16"
+    },
+    "ui_event": {
+      "c3_11_runtime_pc": "0x40d57118",
+      "eg_relative_offset": "0xbf7118",
+      "same_64_bytes": false,
+      "different_bytes_in_64": 1,
+      "first_4_byte_instruction_old": "mov x0, x19",
+      "first_4_byte_instruction_new": "mov x0, x19"
+    }
+  },
+  "li_exact_byte_diff": [
+    {
+      "relative_offset": "0x17",
+      "old_byte": "0x31",
+      "new_byte": "0x32"
+    },
+    {
+      "relative_offset": "0x18",
+      "old_byte": "0x62",
+      "new_byte": "0x30"
+    }
+  ],
+  "sparse_instruction_word_candidates": [
+    {
+      "eg_offset": "0xfc14",
+      "provisional_runtime_pc": "0x4016fc14",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x12104",
+      "provisional_runtime_pc": "0x40172104",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x28c54",
+      "provisional_runtime_pc": "0x40188c54",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x41187594",
+      "new_instruction": "bl #0x411875fc",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xa4ca0",
+      "provisional_runtime_pc": "0x40204ca0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xa5c24",
+      "provisional_runtime_pc": "0x40205c24",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xa6848",
+      "provisional_runtime_pc": "0x40206848",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xae448",
+      "provisional_runtime_pc": "0x4020e448",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xbc064",
+      "provisional_runtime_pc": "0x4021c064",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xceaa0",
+      "provisional_runtime_pc": "0x4022eaa0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xd559c",
+      "provisional_runtime_pc": "0x4023559c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xed7ec",
+      "provisional_runtime_pc": "0x4024d7ec",
+      "page_changed_bytes": 1,
+      "old_instruction": "b #0x4127a900",
+      "new_instruction": "b #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xf7dc4",
+      "provisional_runtime_pc": "0x40257dc4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0xffcf0",
+      "provisional_runtime_pc": "0x4025fcf0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1022e0",
+      "provisional_runtime_pc": "0x402622e0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x41292728",
+      "new_instruction": "bl #0x412927a8",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x107f70",
+      "provisional_runtime_pc": "0x40267f70",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x10c5c4",
+      "provisional_runtime_pc": "0x4026c5c4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x111a24",
+      "provisional_runtime_pc": "0x40271a24",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1125e4",
+      "provisional_runtime_pc": "0x402725e4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x132c58",
+      "provisional_runtime_pc": "0x40292c58",
+      "page_changed_bytes": 1,
+      "old_instruction": "b #0x4127a900",
+      "new_instruction": "b #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x147e08",
+      "provisional_runtime_pc": "0x402a7e08",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x14b068",
+      "provisional_runtime_pc": "0x402ab068",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x41185928",
+      "new_instruction": "bl #0x41185990",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x150200",
+      "provisional_runtime_pc": "0x402b0200",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x41185928",
+      "new_instruction": "bl #0x41185990",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x162bd0",
+      "provisional_runtime_pc": "0x402c2bd0",
+      "page_changed_bytes": 1,
+      "old_instruction": "b #0x4127ad80",
+      "new_instruction": "b #0x4127ae00",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x165c58",
+      "provisional_runtime_pc": "0x402c5c58",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1676e4",
+      "provisional_runtime_pc": "0x402c76e4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1692b4",
+      "provisional_runtime_pc": "0x402c92b4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x176e6c",
+      "provisional_runtime_pc": "0x402d6e6c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x17f7c4",
+      "provisional_runtime_pc": "0x402df7c4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x18e490",
+      "provisional_runtime_pc": "0x402ee490",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x18ffb4",
+      "provisional_runtime_pc": "0x402effb4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x19e3b0",
+      "provisional_runtime_pc": "0x402fe3b0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1a5fbc",
+      "provisional_runtime_pc": "0x40305fbc",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127b2c0",
+      "new_instruction": "bl #0x4127b340",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1c12c4",
+      "provisional_runtime_pc": "0x403212c4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1d0260",
+      "provisional_runtime_pc": "0x40330260",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1d6128",
+      "provisional_runtime_pc": "0x40336128",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1d7208",
+      "provisional_runtime_pc": "0x40337208",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1ea3c4",
+      "provisional_runtime_pc": "0x4034a3c4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1eba54",
+      "provisional_runtime_pc": "0x4034ba54",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a7c0",
+      "new_instruction": "bl #0x4127a840",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x1fabbc",
+      "provisional_runtime_pc": "0x4035abbc",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x201b0c",
+      "provisional_runtime_pc": "0x40361b0c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x20dd8c",
+      "provisional_runtime_pc": "0x4036dd8c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2113cc",
+      "provisional_runtime_pc": "0x403713cc",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2151b8",
+      "provisional_runtime_pc": "0x403751b8",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x22fdc8",
+      "provisional_runtime_pc": "0x4038fdc8",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x23e49c",
+      "provisional_runtime_pc": "0x4039e49c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2426d0",
+      "provisional_runtime_pc": "0x403a26d0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x252ff4",
+      "provisional_runtime_pc": "0x403b2ff4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x254ca8",
+      "provisional_runtime_pc": "0x403b4ca8",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2576c0",
+      "provisional_runtime_pc": "0x403b76c0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x261a74",
+      "provisional_runtime_pc": "0x403c1a74",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ad80",
+      "new_instruction": "bl #0x4127ae00",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x263964",
+      "provisional_runtime_pc": "0x403c3964",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127d850",
+      "new_instruction": "bl #0x4127d8d0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x279080",
+      "provisional_runtime_pc": "0x403d9080",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x27fe1c",
+      "provisional_runtime_pc": "0x403dfe1c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2834c0",
+      "provisional_runtime_pc": "0x403e34c0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x293058",
+      "provisional_runtime_pc": "0x403f3058",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x298478",
+      "provisional_runtime_pc": "0x403f8478",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x41012c84",
+      "new_instruction": "bl #0x41012cec",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2a2d6c",
+      "provisional_runtime_pc": "0x40402d6c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2a6360",
+      "provisional_runtime_pc": "0x40406360",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2c5a54",
+      "provisional_runtime_pc": "0x40425a54",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2cab3c",
+      "provisional_runtime_pc": "0x4042ab3c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2cb088",
+      "provisional_runtime_pc": "0x4042b088",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2e64b0",
+      "provisional_runtime_pc": "0x404464b0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127d2e0",
+      "new_instruction": "bl #0x4127d360",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2f1f28",
+      "provisional_runtime_pc": "0x40451f28",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x2f70f4",
+      "provisional_runtime_pc": "0x404570f4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ad80",
+      "new_instruction": "bl #0x4127ae00",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x3050e4",
+      "provisional_runtime_pc": "0x404650e4",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x314028",
+      "provisional_runtime_pc": "0x40474028",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a900",
+      "new_instruction": "bl #0x4127a980",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x32644c",
+      "provisional_runtime_pc": "0x4048644c",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127a7c0",
+      "new_instruction": "bl #0x4127a840",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x331860",
+      "provisional_runtime_pc": "0x40491860",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x332440",
+      "provisional_runtime_pc": "0x40492440",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127ab40",
+      "new_instruction": "bl #0x4127abc0",
+      "priority": 3,
+      "unverified_code_site": true
+    },
+    {
+      "eg_offset": "0x33ddf0",
+      "provisional_runtime_pc": "0x4049ddf0",
+      "page_changed_bytes": 1,
+      "old_instruction": "bl #0x4127d2e0",
+      "new_instruction": "bl #0x4127d360",
+      "priority": 3,
+      "unverified_code_site": true
+    }
+  ],
+  "limitations": [
+    "QEMU C3.11 address locations do not prove the same function is at that C3.12 address",
+    "AArch64 disassembly of arbitrary data can produce plausible-looking instructions",
+    "No executed call chain, symbol boundary, or lens fix has yet been proven"
+  ],
+  "all_sparse_decodable_instruction_candidates": 4215
+}

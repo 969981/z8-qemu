@@ -285,7 +285,9 @@
     "research/3.12/ci/compare_z8.py": "3651e351b647deb3130e3b7307a5ca78c17f417baa283e7672271a3dee8db3f8",
     "research/3.12/results/comparison.json": "b23809f4f6f51b8b84436b496b56aa1c9710a7746b6761c54e43d1b18ff0267e",
     "research/3.12/results/comparison.md": "fd922c9173178a2c00b969c63ec9c40314d76b9283457d88d2f9183c55b24be5",
-    ".github/workflows/z8-312-boot-smoke.yml": "008881e63f13985870b7386ace43627ea9929458bb8bc8588fccbb842d2c58e9"
+    ".github/workflows/z8-312-boot-smoke.yml": "008881e63f13985870b7386ace43627ea9929458bb8bc8588fccbb842d2c58e9",
+    "research/3.12/results/arm64_triage.json": "64d5cf909982d42ace6602e2e1f84daf761220b07c022cd5eb5ced7f0502f1e3",
+    "research/3.12/results/arm64_triage.md": "209cafbc798a832479fafe2efa6107237bbedf1213d47ae0333f28a088bcb730"
   },
   "schema": 1,
   "scope": "Z8 emulator sources, tools, tests and documentation",
