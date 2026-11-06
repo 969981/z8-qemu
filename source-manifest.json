@@ -288,7 +288,9 @@
     ".github/workflows/z8-312-boot-smoke.yml": "008881e63f13985870b7386ace43627ea9929458bb8bc8588fccbb842d2c58e9",
     "research/3.12/results/arm64_triage.json": "64d5cf909982d42ace6602e2e1f84daf761220b07c022cd5eb5ced7f0502f1e3",
     "research/3.12/results/arm64_triage.md": "209cafbc798a832479fafe2efa6107237bbedf1213d47ae0333f28a088bcb730",
-    "research/3.12/ci/inspect_arm64.py": "66c7f8e242c5625e5e8db7089e31be5b227b4d5dbe6efcaf932bf0657da7cb8b"
+    "research/3.12/ci/inspect_arm64.py": "66c7f8e242c5625e5e8db7089e31be5b227b4d5dbe6efcaf932bf0657da7cb8b",
+    "research/3.12/results/boot_status.md": "b175286f3a3e6ff3a0cc58e3756b25ea40ac6e777ad5daf09236fe913cbafa25",
+    "research/3.12/results/boot_status.json": "2a53d0295e55b5157a48b4fe93b18e6c14f2a8a85cb4ab1a8cf05a768df4c7e2"
   },
   "schema": 1,
   "scope": "Z8 emulator sources, tools, tests and documentation",

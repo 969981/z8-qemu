@@ -1,0 +1,2835 @@
+{
+  "baseline_required": true,
+  "c3_12_hash_only_temporarily_allowed": true,
+  "firmware_bytes_mutated": false,
+  "physical_camera_flashing": false,
+  "311": {
+    "exit_code": 0,
+    "result_json": true,
+    "finished_smoke": true,
+    "model_checks": [
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "original power status accepted",
+        "passed": true
+      },
+      {
+        "name": "original system power event",
+        "passed": true
+      },
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "boot-out-00-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-00-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-00-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-00-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-00-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-00-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-01-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-01-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-01-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-01-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-01-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-01-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-02-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-02-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-02-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-02-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-02-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-02-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-03-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-03-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-03-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-03-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-03-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-03-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-04-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-04-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-04-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-04-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-04-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-04-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-05-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-05-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-05-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-05-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-05-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-05-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-06-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-06-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-06-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-06-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-06-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-06-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-07-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-07-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-07-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-07-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-07-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-07-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-08-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-08-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-08-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-08-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-08-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-08-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-09-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-09-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-09-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-09-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-09-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-09-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-10-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-10-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-10-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-10-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-10-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-10-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "original lens controller accepts reply",
+        "passed": true
+      },
+      {
+        "name": "boot-out-11-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-11-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-11-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-11-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-11-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-11-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "boot-out-12-native TX requests serial channel 0",
+        "passed": true
+      },
+      {
+        "name": "boot-out-12-native TX PIO prefill",
+        "passed": true
+      },
+      {
+        "name": "boot-out-12-native TX refills second chunk",
+        "passed": true
+      },
+      {
+        "name": "boot-out-12-native TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "boot-out-12-native serial transfer succeeds",
+        "passed": true
+      },
+      {
+        "name": "boot-out-12-native driver reads MCU ack high",
+        "passed": true
+      },
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "original lens controller accepts reply",
+        "passed": true
+      },
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "no unmodeled MMIO in observed run",
+        "passed": true
+      }
+    ],
+    "guest_error": null
+  },
+  "312": {
+    "exit_code": 1,
+    "result_json": true,
+    "finished_smoke": false,
+    "model_checks": [
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      },
+      {
+        "name": "original power status accepted",
+        "passed": true
+      },
+      {
+        "name": "original system power event",
+        "passed": true
+      },
+      {
+        "name": "original MCU receive requests serial channel 1",
+        "passed": true
+      },
+      {
+        "name": "original channel 1 prefills 64 PIO words",
+        "passed": true
+      },
+      {
+        "name": "native task drains first chunk and refills TX",
+        "passed": true
+      },
+      {
+        "name": "native PIO writes first RX chunk",
+        "passed": true
+      },
+      {
+        "name": "external clock sees native TX bytes in order",
+        "passed": true
+      },
+      {
+        "name": "serial RX RAM contains complete supplied frame",
+        "passed": true
+      }
+    ],
+    "guest_error": "TimeoutError('native ADC breakpoint 0x41181504')"
+  },
+  "c3_12_boot_qualified": false
+}
