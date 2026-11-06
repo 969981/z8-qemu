@@ -278,7 +278,9 @@
     "research/3.12/Z8_v3.12_initramfs_manifest.csv": "279a9e8ddebf06f35125c6f202c44d11a06e9de04696c9116716685d90da5001",
     "research/3.12/Z8_v3.12_probe.json": "691880a8872173930f64fcd9940a5fc3f000d14f02cd8477291972027c5b6923",
     "research/3.12/unpack_li.py": "68c5e62ca85bb35fe0ecec78662440722ba9424bbf699a2b7f53ae30e2ebf167",
-    "research/3.12/UNPACK_STATUS.md": "8666af899c280ee1813c0dcddb4cdf7663e9535bee8c7358d667da3f2a29250a"
+    "research/3.12/UNPACK_STATUS.md": "8666af899c280ee1813c0dcddb4cdf7663e9535bee8c7358d667da3f2a29250a",
+    "research/3.12/t3_index_confidence.csv": "cfc1a28fd9323508c84a7b89aa18af186433fae9787f6fd0472b6d059bd00453",
+    "research/3.12/DEEP_ANALYSIS.md": "f135ea05c0b58d4deca0938b05bbed50e0ec08733cf81b969ec533d32b192cd5"
   },
   "schema": 1,
   "scope": "Z8 emulator sources, tools, tests and documentation",
