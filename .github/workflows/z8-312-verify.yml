@@ -78,6 +78,14 @@ jobs:
             2>&1 | tee "$REPORT_DIR/key-recovery.log"
           # Logs contain only verification status and hashes, no XOR table contents.
 
+      - name: Provide short-lived XOR table artifact for local validation
+        uses: actions/upload-artifact@v4
+        with:
+          name: z8-c312-verified-xor-tables
+          path: ${{ runner.temp }}/nikon_xor_key.json
+          if-no-files-found: error
+          retention-days: 1
+
       - name: Decrypt both Nikon Z8 versions with full CRC checks
         shell: bash
         run: |
