@@ -55,7 +55,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dist
-          git archive --format=tar --prefix=z8-qemu/ HEAD | gzip -n > "dist/z8-qemu-source-${GITHUB_SHA:0:12}.tar.gz"
+          sha="$(git rev-parse HEAD)"
+          git archive --format=tar --prefix=z8-qemu/ HEAD | gzip -n > "dist/z8-qemu-source-${sha:0:12}.tar.gz"
           (cd dist && sha256sum *.tar.gz > SHA256SUMS)
       - name: Publish a source-only prerelease
         if: steps.meta.outputs.ready == 'true'
