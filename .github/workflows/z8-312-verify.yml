@@ -1,0 +1,142 @@
+name: Nikon Z8 C3.12 cross-image verification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['3.12']
+    paths:
+      - '.github/workflows/z8-312-verify.yml'
+      - 'research/3.12/ci/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: z8-312-verification
+  cancel-in-progress: false
+
+jobs:
+  recover-verify-diff:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    env:
+      FW_DIR: ${{ runner.temp }}/nikon-stock
+      TOOL_DIR: ${{ runner.temp }}/nikon-keytool
+      REPORT_DIR: ${{ runner.temp }}/z8-report
+    steps:
+      - name: Checkout C3.12 study branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Install Python dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'numpy==2.2.6'
+
+      - name: Pin upstream decoder implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/WonderLantern/nikon-fw-key-tool.git "$TOOL_DIR"
+          git -C "$TOOL_DIR" checkout --quiet 33426e892afd329a3b366b73776bcf53b9ac4ee8
+
+      - name: Retrieve original Nikon images into temporary runner storage
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$FW_DIR"
+          # Original camera binaries are not written into git or uploaded as artifacts.
+          get() {
+            local name="$1" url="$2"
+            curl --fail --location --retry 3 --retry-all-errors \
+              --connect-timeout 30 --max-time 900 --silent --show-error \
+              --output "$FW_DIR/$name" "$url"
+            [[ -s "$FW_DIR/$name" ]]
+            echo "$name: $(stat -c%s "$FW_DIR/$name") bytes"
+          }
+          get Z_8_0311.bin 'https://download.nikonimglib.com/archive8/wP5Vr003qbpC07ibhJ666rmRfF47/Z_8_0311.bin'
+          get Z_8_0312.bin 'https://download.nikonimglib.com/archive8/WphVA00IXlZ207yYdC469xBXwm46/Z_8_0312.bin'
+          get Z7_2_0170.bin 'https://download.nikonimglib.com/archive7/G3fi900RGy4W07tdaO920cp0BB90/Z7_2_0170.bin'
+          get Z_6_0380.bin 'https://download.nikonimglib.com/archive7/3wYNs00xVSiD07LB2RY19q7I3N76/Z_6_0380.bin'
+          get Z_50_0260.bin 'https://download.nikonimglib.com/archive7/7lhGs007FRpa07LBmsY183TvKr69/Z_50_0260.bin'
+          (
+            cd "$FW_DIR"
+            echo 'd67413c2ede6b9ce8887175f20700bd9fbad2a973a4820968c45503d15d80d96  Z_8_0311.bin' | sha256sum -c
+            echo 'd662dd9dd5da937cb418162c238065e918dcefafd47b47537c3f934d39e83037  Z_8_0312.bin' | sha256sum -c
+          )
+
+      - name: Recover all 256 XOR-table entries and verify five stock packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$REPORT_DIR"
+          python "$TOOL_DIR/extract_key.py" --firmware-dir "$FW_DIR" \
+            --out "$RUNNER_TEMP/nikon_xor_key.json" \
+            2>&1 | tee "$REPORT_DIR/key-recovery.log"
+          # Logs contain only verification status and hashes, no XOR table contents.
+
+      - name: Decrypt both Nikon Z8 versions with full CRC checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$TOOL_DIR/decrypt_firmware.py" \
+            --key "$RUNNER_TEMP/nikon_xor_key.json" \
+            --firmware "$FW_DIR/Z_8_0311.bin" \
+            --out "$RUNNER_TEMP/z8_0311.dec" \
+            2>&1 | tee "$REPORT_DIR/decrypt-3.11.log"
+          python "$TOOL_DIR/decrypt_firmware.py" \
+            --key "$RUNNER_TEMP/nikon_xor_key.json" \
+            --firmware "$FW_DIR/Z_8_0312.bin" \
+            --out "$RUNNER_TEMP/z8_0312.dec" \
+            2>&1 | tee "$REPORT_DIR/decrypt-3.12.log"
+
+      - name: Compare CRC-verified component payloads and QEMU C3.11 baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/3.12/ci/compare_z8.py \
+            --old "$RUNNER_TEMP/z8_0311.dec" \
+            --new "$RUNNER_TEMP/z8_0312.dec" \
+            --out "$REPORT_DIR"
+
+      - name: Retain only text analysis, not firmware or decrypted payloads
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: z8-c312-crc-and-diff
+          path: |
+            ${{ runner.temp }}/z8-report/*.log
+            ${{ runner.temp }}/z8-report/*.json
+            ${{ runner.temp }}/z8-report/*.md
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Publish verified JSON and Markdown only
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p research/3.12/results
+          cp "$REPORT_DIR/comparison.json" "$REPORT_DIR/comparison.md" research/3.12/results/
+          python - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path(".")
+          p=root/"source-manifest.json"
+          doc=json.loads(p.read_text())
+          for file in sorted((root/"research/3.12/results").glob("*")):
+              name=file.as_posix()
+              doc["files"][name]=hashlib.sha256(file.read_bytes()).hexdigest()
+          p.write_text(json.dumps(doc,indent=2)+"\n")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/3.12/results/comparison.json research/3.12/results/comparison.md source-manifest.json
+          if git diff --cached --quiet; then
+            echo 'Verification report unchanged'
+            exit 0
+          fi
+          git commit -m 'research: record verified Nikon Z8 3.11 versus 3.12 module diff'
+          git push origin HEAD:3.12
