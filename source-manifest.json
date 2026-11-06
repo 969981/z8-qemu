@@ -272,7 +272,8 @@
     "tools/virtual_exfat_window.py": "7ab5047f3c3ef4b87b217163bc90186f3dbc667645e0e972dcf7ce6563882f34",
     "tools/virtual_recording_card.py": "de2f8322d4fbcc4a63b80fa32bbe98370a13cf1214ed395b95cf3dfcb9c9ddd3",
     "tools/z8_global1_boundary_input.py": "df028d999089395ed30832caf2b9835c9a9611c6bbef7c313c143b19660fea95",
-    "tools/z8_navigation_input.py": "817bb0d5b7ff10785cf938288ddb589a0ba19bda83bb7635f49f306e2d844173"
+    "tools/z8_navigation_input.py": "817bb0d5b7ff10785cf938288ddb589a0ba19bda83bb7635f49f306e2d844173",
+    ".github/workflows/sync-upstream.yml": "f8e37904ff27337c126d0dc3e3628301c89431c63f6513cde19244056c940d79"
   },
   "schema": 1,
   "scope": "Z8 emulator sources, tools, tests and documentation",
