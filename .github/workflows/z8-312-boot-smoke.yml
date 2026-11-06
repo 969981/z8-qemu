@@ -1,0 +1,223 @@
+name: Nikon Z8 C3.12 QEMU bounded boot probe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['3.12']
+    paths:
+      - '.github/workflows/z8-312-boot-smoke.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: z8-312-boot-smoke
+  cancel-in-progress: false
+
+jobs:
+  boot-311-and-312:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    env:
+      FW: /tmp/z8-boot-firmware-${{ github.run_id }}
+      EXTRACTOR: /tmp/z8-boot-extractor-${{ github.run_id }}
+      REPORT: /tmp/z8-boot-report-${{ github.run_id }}
+      QEMU_SRC: /tmp/qemu-11.1.1-${{ github.run_id }}
+      QEMU_BUILD: /tmp/z8-qemu-build-${{ github.run_id }}
+    steps:
+      - name: Checkout study branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Install build and analysis dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$FW" "$REPORT"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ninja-build pkg-config build-essential python3-venv \
+            libglib2.0-dev libpixman-1-dev libfdt-dev zlib1g-dev libjpeg-dev \
+            libx264-dev libx265-dev libavcodec-dev libavutil-dev libslirp-dev \
+            libcapstone-dev
+          python -m pip install -r requirements.txt 'numpy==2.2.6'
+
+      - name: Acquire firmware inputs and fully CRC-verify Z8 engines
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/WonderLantern/nikon-fw-key-tool.git "$EXTRACTOR"
+          git -C "$EXTRACTOR" checkout --quiet 33426e892afd329a3b366b73776bcf53b9ac4ee8
+          get() {
+            curl --fail --location --retry 3 --retry-all-errors \
+              --connect-timeout 30 --max-time 900 --silent --show-error \
+              --output "$FW/$1" "$2"
+          }
+          get Z_8_0311.bin 'https://download.nikonimglib.com/archive8/wP5Vr003qbpC07ibhJ666rmRfF47/Z_8_0311.bin'
+          get Z_8_0312.bin 'https://download.nikonimglib.com/archive8/WphVA00IXlZ207yYdC469xBXwm46/Z_8_0312.bin'
+          get Z7_2_0170.bin 'https://download.nikonimglib.com/archive7/G3fi900RGy4W07tdaO920cp0BB90/Z7_2_0170.bin'
+          get Z_6_0380.bin 'https://download.nikonimglib.com/archive7/3wYNs00xVSiD07LB2RY19q7I3N76/Z_6_0380.bin'
+          get Z_50_0260.bin 'https://download.nikonimglib.com/archive7/7lhGs007FRpa07LBmsY183TvKr69/Z_50_0260.bin'
+          (cd "$FW"; echo 'd67413c2ede6b9ce8887175f20700bd9fbad2a973a4820968c45503d15d80d96  Z_8_0311.bin' | sha256sum -c)
+          (cd "$FW"; echo 'd662dd9dd5da937cb418162c238065e918dcefafd47b47537c3f934d39e83037  Z_8_0312.bin' | sha256sum -c)
+          python "$EXTRACTOR/extract_key.py" --firmware-dir "$FW" --out "$RUNNER_TEMP/key.json" > "$REPORT/recovery.log"
+          for version in 0311 0312; do
+            python "$EXTRACTOR/decrypt_firmware.py" --key "$RUNNER_TEMP/key.json" \
+              --firmware "$FW/Z_8_${version}.bin" --out "$FW/Z_8_${version}.dec" \
+              > "$REPORT/decrypt-${version}.log"
+          done
+          python - <<'PY'
+          import os,struct,hashlib,pathlib
+          fw=pathlib.Path(os.environ['FW'])
+          for ver in ('0311','0312'):
+              raw=(fw/f'Z_8_{ver}.dec').read_bytes()
+              body=raw[32:]
+              n=struct.unpack_from('>I',body,32)[0]
+              matches=[]
+              for i in range(n):
+                  start=48+i*32
+                  name=body[start:start+16].split(b'\0')[0].decode('ascii')
+                  off,size=struct.unpack_from('>II',body,start+16)
+                  if name.startswith('eg'):matches.append(body[off:off+size-2])
+              assert len(matches)==1
+              eg=matches[0]
+              h=hashlib.sha256(eg).hexdigest()
+              assert len(eg)==81807709
+              if ver=='0311':assert h=='2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853'
+              if ver=='0312':assert h=='ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867'
+              (fw/f'eg_{ver}.bi').write_bytes(eg)
+              print(ver,len(eg),h)
+          PY
+
+      - name: Build exact QEMU 11.1.1 with upstream Z8 overlay
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --silent --show-error --max-time 900 \
+            https://download.qemu.org/qemu-11.1.1.tar.xz \
+            --output "$RUNNER_TEMP/qemu-11.1.1.tar.xz"
+          mkdir -p "$QEMU_SRC"
+          tar -xf "$RUNNER_TEMP/qemu-11.1.1.tar.xz" --strip-components=1 -C "$QEMU_SRC"
+          python tools/build.py --qemu-source "$QEMU_SRC" \
+            --build-dir "$QEMU_BUILD" --jobs 2 > "$REPORT/build.log" 2>&1
+          "$QEMU_BUILD/qemu-system-aarch64" --version | head -1
+
+      - name: Synthetic RAW input for headless boot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/make_cmos.py --output "$FW/test.raw"
+
+      - name: Boot the previously validated C3.11 baseline
+        id: old
+        shell: bash
+        run: |
+          set +e
+          timeout 170s python tools/run.py --firmware "$FW/eg_0311.bi" \
+            --qemu "$QEMU_BUILD/qemu-system-aarch64" --raw "$FW/test.raw" \
+            --output "$FW/boot311" --smoke > "$REPORT/boot311.log" 2>&1
+          code=$?
+          echo "$code" > "$REPORT/boot311.exit"
+          echo "C3.11 exit code: $code"
+          exit 0
+
+      - name: Test C3.12 with only fingerprint validation adapted in temporary workspace
+        id: new
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Do not change guest bytes or remove firmware checks in the repository.
+          # The following SHA substitution affects only this throwaway runner checkout.
+          python - <<'PY'
+          from pathlib import Path
+          old='2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853'
+          new='ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867'
+          for name in ('tools/runtime.py','tools/full_guest.py','tools/probe.py'):
+              p=Path(name)
+              s=p.read_text()
+              assert old in s, name
+              p.write_text(s.replace(old,new))
+          PY
+          set +e
+          timeout 170s python tools/run.py --firmware "$FW/eg_0312.bi" \
+            --qemu "$QEMU_BUILD/qemu-system-aarch64" --raw "$FW/test.raw" \
+            --output "$FW/boot312" --smoke > "$REPORT/boot312.log" 2>&1
+          code=$?
+          echo "$code" > "$REPORT/boot312.exit"
+          echo "C3.12 exit code: $code"
+          exit 0
+
+      - name: Produce bounded, unqualified-by-default boot results
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$REPORT"
+          python - <<'PY'
+          import json,os,pathlib
+          base=pathlib.Path(os.environ['REPORT'])
+          fw=pathlib.Path(os.environ['FW'])
+          report={'baseline_required':True,'c3_12_hash_only_temporarily_allowed':True,
+                  'firmware_bytes_mutated':False,'physical_camera_flashing':False}
+          for ver in ('311','312'):
+              p=base/f'boot{ver}.exit'
+              code=int(p.read_text()) if p.exists() else None
+              d=fw/f'boot{ver}'/'result.json'
+              result=json.loads(d.read_text()) if d.is_file() else None
+              report[ver]={'exit_code':code,'result_json':bool(result),
+                           'finished_smoke':code==0,
+                           'model_checks':result.get('checks') if result else None,
+                           'guest_error':result.get('error') if result else None}
+          report['c3_12_boot_qualified']=bool(report['311']['finished_smoke'] and report['312']['finished_smoke'])
+          (base/'boot_status.json').write_text(json.dumps(report,indent=2)+'\n')
+          lines=['# Nikon Z8 C3.12 QEMU bounded boot probe','',
+                 'The firmware images were only used in an isolated CI runner.',
+                 'The baseline was tested first; 3.12 SHA checks were changed only in the ephemeral runner copy.',
+                 'No guest instructions were patched, and no real camera is involved.','',
+                 '| Test | Exit status | Finished smoke? |',
+                 '| --- | ---: | --- |']
+          for key in ('311','312'):
+              x=report[key]
+              lines.append(f'| C3.{key[-2:]} | {x["exit_code"]} | {x["finished_smoke"]} |')
+          lines += ['',f'Qualified headless smoke in this runner: **{report["c3_12_boot_qualified"]}**.','',
+                    'Exit 124 means timeout. A failed smoke may be caused by hardcoded C3.11 boot breakpoints, Linux host differences, or missing hardware emulation; examine test logs before attributing it to the firmware.']
+          (base/'boot_status.md').write_text('\n'.join(lines)+'\n')
+          print(json.dumps(report,indent=2)[:2500])
+          PY
+
+      - name: Upload bounded text diagnostics only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: z8-c312-headless-qemu-probe
+          path: |
+            ${{ env.REPORT }}/*.log
+            ${{ env.REPORT }}/*.json
+            ${{ env.REPORT }}/*.md
+            ${{ env.REPORT }}/*.exit
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Commit reproducible boot report on latest study branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$REPORT/boot_status.json" || exit 0
+          git fetch --no-tags origin 3.12
+          git checkout -B boot-report origin/3.12
+          mkdir -p research/3.12/results
+          cp "$REPORT/boot_status.json" "$REPORT/boot_status.md" research/3.12/results/
+          python - <<'PY'
+          import hashlib,json,pathlib
+          p=pathlib.Path('source-manifest.json')
+          d=json.loads(p.read_text())
+          for f in pathlib.Path('research/3.12/results').glob('boot_status.*'):
+              d['files'][f.as_posix()]=hashlib.sha256(f.read_bytes()).hexdigest()
+          p.write_text(json.dumps(d,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/3.12/results/boot_status.* source-manifest.json
+          git diff --cached --quiet || { git commit -m 'research: record Z8 C3.12 bounded QEMU boot evidence'; git push origin HEAD:3.12; }
