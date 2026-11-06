@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install 'numpy==2.2.6'
+      - run: python -m pip install 'numpy==2.2.6' 'capstone==5.0.6'
 
       - name: Pin upstream decoder implementation
         shell: bash
@@ -101,6 +101,10 @@ jobs:
             --old "$RUNNER_TEMP/z8_0311.dec" \
             --new "$RUNNER_TEMP/z8_0312.dec" \
             --out "$REPORT_DIR"
+          python research/3.12/ci/inspect_arm64.py \
+            --old "$RUNNER_TEMP/z8_0311.dec" \
+            --new "$RUNNER_TEMP/z8_0312.dec" \
+            --out "$REPORT_DIR"
 
       - name: Retain only text analysis, not firmware or decrypted payloads
         if: always()
@@ -123,7 +127,7 @@ jobs:
           git fetch --no-tags origin 3.12
           git checkout -B ci-results origin/3.12
           mkdir -p research/3.12/results
-          cp "$REPORT_DIR/comparison.json" "$REPORT_DIR/comparison.md" research/3.12/results/
+          cp "$REPORT_DIR"/*.json "$REPORT_DIR"/*.md research/3.12/results/
           python - <<'PY'
           import hashlib,json,pathlib
           root=pathlib.Path(".")
@@ -136,7 +140,7 @@ jobs:
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add research/3.12/results/comparison.json research/3.12/results/comparison.md source-manifest.json
+          git add research/3.12/results/*.json research/3.12/results/*.md source-manifest.json
           if git diff --cached --quiet; then
             echo 'Verification report unchanged'
             exit 0
