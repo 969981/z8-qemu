@@ -119,6 +119,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # The manifest may have advanced since checkout: use the latest remote branch.
+          git fetch --no-tags origin 3.12
+          git checkout -B ci-results origin/3.12
           mkdir -p research/3.12/results
           cp "$REPORT_DIR/comparison.json" "$REPORT_DIR/comparison.md" research/3.12/results/
           python - <<'PY'
