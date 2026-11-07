@@ -632,6 +632,14 @@ The session's finite TX budget remains 16 MiB and 1,024 descriptors. Raw PCM
 capture is available only through an explicit diagnostic getter and is excluded
 from normal state snapshots. Keep captured audio private.
 
+`--native-audio-output` exposes the same serial5 sink outside the Movie
+profile so a native session (for example a HE capture run) gets a verifiable
+audio evidence channel: `none` (default), `auto`, or a fresh `.wav` path with
+the same validation. It appends only the serial5 audio models and the sink
+selection, reusing the profile's TX model when present. The sink is single:
+combine it with Movie playback only under `--movie-audio-output none`. This
+channel qualifies guest PCM delivery, not physical playback.
+
 Generated-input checks verify actual WAV sample order and exit finalization;
 a separate Mac check opens the automatic host backend. No physical codec,
 microphone, speaker-quality or arbitrary Movie-format qualification is claimed.
