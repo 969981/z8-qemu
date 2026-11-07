@@ -1,6 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-2.0-or-later
  * Copyright (C) 2026 RdWing
+ * Copyright (C) 2026 GoldJohnKing: single-lane stream-channel state field.
  * Nikon Z8 C3.11 functional board. Experimental, not a hardware specification.
  * Z8 scope and synthetic-input assumptions: ../README.md.
  * Upstream model attribution and retained licensing: ../NOTICE.md.
@@ -429,6 +430,7 @@ struct NikonZ8State {
     bool serial5_audio_exit_registered;
     AudioBackend *serial5_audio_backend;
     SWVoiceOut *serial5_audio_voice;
+    unsigned serial5_audio_stream_channels;
     GByteArray *serial5_host_pcm;
     uint64_t serial5_host_pcm_bytes;
     QEMUTimer *serial5_tx_drain_timer;
