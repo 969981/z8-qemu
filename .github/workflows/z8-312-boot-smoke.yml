@@ -6,6 +6,9 @@ on:
     branches: ['3.12']
     paths:
       - '.github/workflows/z8-312-boot-smoke.yml'
+      - 'tools/boot_z8.py'
+      - 'tools/z8_research_sites.py'
+      - 'research/3.12/profiles/3.12.json'
 
 permissions:
   contents: write
@@ -140,6 +143,10 @@ jobs:
               p.write_text(s.replace(old,new))
           PY
           set +e
+          # Explicit opt-in for the static (NOT yet runtime-qualified) C3.12
+          # breakpoint profile; the C3.11 baseline above receives no override.
+          Z8_C312_SITE_PROFILE="$GITHUB_WORKSPACE/research/3.12/profiles/3.12.json" \
+          Z8_C312_ALLOW_UNQUALIFIED_BOOT=1 \
           timeout 170s python tools/run.py --firmware "$FW/eg_0312.bi" \
             --qemu "$QEMU_BUILD/qemu-system-aarch64" --raw "$FW/test.raw" \
             --output "$FW/boot312" --smoke > "$REPORT/boot312.log" 2>&1
@@ -159,6 +166,7 @@ jobs:
           base=pathlib.Path(os.environ['REPORT'])
           fw=pathlib.Path(os.environ['FW'])
           report={'baseline_required':True,'c3_12_hash_only_temporarily_allowed':True,
+                  'c3_12_candidate_address_profile':True,
                   'firmware_bytes_mutated':False,'physical_camera_flashing':False}
           for ver in ('311','312'):
               p=base/f'boot{ver}.exit'
