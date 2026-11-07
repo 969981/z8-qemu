@@ -1,0 +1,274 @@
+{
+  "schema": "nikon-z8-c312-static-address-candidates-v1",
+  "version": "3.12",
+  "input_engine_sha256": "ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867",
+  "reference_engine_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+  "runtime_qualified": false,
+  "provenance": "CRC-verified stock C3.11/C3.12 EG module byte-neighborhood anchors",
+  "sites": {
+    "boot_entry": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40160000",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40160000"
+    },
+    "adc_ready": {
+      "status": "byte_identical",
+      "candidate_pc": "0x4033db98",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x4033DB98"
+    },
+    "power_status": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x40d57a90",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 0,
+      "unique_anchors": 82,
+      "supporting_anchors": 82,
+      "support_before": 35,
+      "support_after": 45,
+      "nearest_before_bytes": 64,
+      "nearest_after_bytes": 48,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x40D57A90"
+    },
+    "system_power_event": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40d67260",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40D67260"
+    },
+    "battery_callback": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x4118156c",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 104,
+      "unique_anchors": 54,
+      "supporting_anchors": 54,
+      "support_before": 30,
+      "support_after": 24,
+      "nearest_before_bytes": 48,
+      "nearest_after_bytes": 16,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x41181504"
+    },
+    "lens_controller_reply": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x4106e6f8",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 104,
+      "unique_anchors": 70,
+      "supporting_anchors": 70,
+      "support_before": 35,
+      "support_after": 34,
+      "nearest_before_bytes": 64,
+      "nearest_after_bytes": 16,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x4106E690"
+    },
+    "menu_event_1": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40d66034",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40D66034"
+    },
+    "menu_event_2": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x40d55da0",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 0,
+      "unique_anchors": 84,
+      "supporting_anchors": 84,
+      "support_before": 44,
+      "support_after": 39,
+      "nearest_before_bytes": 32,
+      "nearest_after_bytes": 48,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x40D55DA0"
+    },
+    "menu_event_3": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40d5eb7c",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40D5EB7C"
+    },
+    "half_shutter_1": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x40d271e4",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 0,
+      "unique_anchors": 75,
+      "supporting_anchors": 75,
+      "support_before": 44,
+      "support_after": 29,
+      "nearest_before_bytes": 32,
+      "nearest_after_bytes": 48,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x40D271E4"
+    },
+    "half_shutter_2": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x40d26d7c",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 0,
+      "unique_anchors": 95,
+      "supporting_anchors": 95,
+      "support_before": 47,
+      "support_after": 47,
+      "nearest_before_bytes": 32,
+      "nearest_after_bytes": 16,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x40D26D7C"
+    },
+    "half_shutter_3": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40d3003c",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40D3003C"
+    },
+    "framebuffer_event": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x40faca24",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 104,
+      "unique_anchors": 86,
+      "supporting_anchors": 86,
+      "support_before": 44,
+      "support_after": 40,
+      "nearest_before_bytes": 32,
+      "nearest_after_bytes": 16,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x40FAC9BC"
+    },
+    "ui_event": {
+      "status": "two_sided_anchor_candidate",
+      "candidate_pc": "0x40d57118",
+      "confidence": "static_candidate_not_runtime_validated",
+      "candidate_shift": 0,
+      "unique_anchors": 87,
+      "supporting_anchors": 87,
+      "support_before": 42,
+      "support_after": 43,
+      "nearest_before_bytes": 32,
+      "nearest_after_bytes": 32,
+      "runner_up_support": 0,
+      "neighbor_at_candidate_identical": true,
+      "reference_pc": "0x40D57118"
+    },
+    "gpio_rx_isr": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c161f0",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C161F0"
+    },
+    "gpio_tx_isr": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c161d8",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C161D8"
+    },
+    "rx_request": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c934b4",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C934B4"
+    },
+    "tx_request": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c930ec",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C930EC"
+    },
+    "serial_before_enable": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c14a60",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C14A60"
+    },
+    "serial_prefill": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c14a8c",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C14A8C"
+    },
+    "serial_drain": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c14ad0",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C14AD0"
+    },
+    "serial_rx_isr": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c14f10",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C14F10"
+    },
+    "rx_accepted": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c935c8",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C935C8"
+    },
+    "tx_complete": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c930f0",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C930F0"
+    },
+    "tx_ack": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c931d8",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C931D8"
+    },
+    "tx_final": {
+      "status": "byte_identical",
+      "candidate_pc": "0x40c93240",
+      "confidence": "exact_bytes_not_runtime_tested",
+      "shift": 0,
+      "unique_anchors": 0,
+      "reference_pc": "0x40C93240"
+    }
+  }
+}
