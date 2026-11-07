@@ -301,7 +301,7 @@
     "research/3.12/ADDRESS_PORTING.md": "11f9cba54b092f1d5a2fc81209bd10b2004cbaa77e89a39039542cbaee37f090",
     "research/3.12/ci/verify_runtime_evidence.py": "db59a3c73c005c5f88163ee99370433f04eaf565114dd3e3a36d9bd453fb446d",
     "tests/test_z8_runtime_evidence.py": "617a7de6de157f78c15f1aae42d55313094ad839c4fcecada11c650b307b9235",
-    "research/3.12/ci/summarize_native_features.py": "6ca092d3f1b5a7d7a15bdc0f20ed30bd9ab93c816cd50f55bafd542cb124db35",
+    "research/3.12/ci/summarize_native_features.py": "bbe5217ac81215a1f448a9d00d7dbc59253e8860cf8f247b184efca114ab5ffc",
     "tests/test_z8_native_features.py": "4b19ce2fced2afbf7dbd9e6f18f0408b04f67eb0bbba78c1268c3a7debb933b0",
     "research/3.12/ci/summarize_still_capture.py": "98bc0c65f2a81ac4018a04ee63b4d76a835302213299f7575be63eb395ffc121",
     "tests/test_z8_still_capture_evidence.py": "1f02b11b756bf4ab24ae511ef637df8e0b1ce18fa0c0aa82511a00e044a228d9"
