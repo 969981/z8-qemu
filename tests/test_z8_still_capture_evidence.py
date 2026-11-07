@@ -38,7 +38,7 @@ class Z8StillCaptureEvidence(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
             data=module.summarize(root/"missing.json",root/"missing.raw",1)
-            self.assertFalse(data["test_receipt_exists"])
+            self.assertFalse(data["guest_receipt_exists"])
             self.assertFalse(data["guest_still_write_observed"])
 
 
