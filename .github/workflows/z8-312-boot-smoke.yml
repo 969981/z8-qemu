@@ -10,6 +10,7 @@ on:
       - 'tools/z8_research_sites.py'
       - 'research/3.12/profiles/3.12.json'
       - 'research/3.12/ci/verify_runtime_evidence.py'
+      - 'research/3.12/ci/summarize_native_features.py'
 
 permissions:
   contents: write
@@ -92,6 +93,19 @@ jobs:
               if ver=='0312':assert h=='ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867'
               (fw/f'eg_{ver}.bi').write_bytes(eg)
               print(ver,len(eg),h)
+          # Original EX03.00 module is common across 3.11 and 3.12.
+          raw=(fw/'Z_8_0312.dec').read_bytes()
+          body=raw[32:]
+          count=struct.unpack_from('>I',body,32)[0]
+          members=[]
+          for i in range(count):
+              row=48+i*32
+              name=body[row:row+16].split(b'\0')[0].decode('ascii')
+              off,size=struct.unpack_from('>II',body,row+16)
+              if name.startswith('ex'): members.append(body[off:off+size-2])
+          assert len(members)==1 and len(members[0])==524288
+          assert hashlib.sha256(members[0]).hexdigest()=='8ce129fa3689d1d619f25ba1c44a3a9f1964c76fe77b95adeb4ea912463c8c63'
+          (fw/'ex_0300.bi').write_bytes(members[0])
           PY
 
       - name: Build exact QEMU 11.1.1 with upstream Z8 overlay
@@ -155,6 +169,40 @@ jobs:
           echo "$code" > "$REPORT/boot312.exit"
           echo "C3.12 exit code: $code"
           exit 0
+
+      - name: Independent original EX firmware Photo-Movie mode and MCU probe
+        shell: bash
+        run: |
+          set +e
+          timeout 225s python tools/run_native.py \
+            --firmware "$FW/eg_0312.bi" --mcu "$FW/ex_0300.bi" \
+            --qemu "$QEMU_BUILD/qemu-system-aarch64" --raw "$FW/test.raw" \
+            --output "$FW/native312" --seconds 180 --virtual-seconds 45 \
+            --mcu-pins 'G1=1:G13=1:G14=1:G15=1' \
+            --contact-replay tools/native-movie-recovery-contacts.json \
+            --experimental-shared221 --experimental-boundary-inputs \
+            --experimental-sensor-source-clock --experimental-yuv-channels \
+            --experimental-movie-selector16 --experimental-movie-selector10 \
+            > "$REPORT/native312.log" 2>&1
+          code=$?
+          echo "$code" > "$REPORT/native312.exit"
+          echo "C3.12 original-EX mode test exit: $code (separate experimental result)"
+          exit 0
+
+      - name: Summarize independent EX/MAIN mode and communication evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$REPORT"
+          code=125
+          if [[ -f "$REPORT/native312.exit" ]]; then
+            code="$(cat "$REPORT/native312.exit")"
+          fi
+          python research/3.12/ci/summarize_native_features.py \
+            --receipt "$FW/native312/result.json" \
+            --exit-code "$code" \
+            --out "$REPORT"
 
       - name: Produce bounded, unqualified-by-default boot results
         if: always()
@@ -230,7 +278,8 @@ jobs:
           git checkout -B boot-report origin/3.12
           mkdir -p research/3.12/results
           cp "$REPORT/boot_status.json" "$REPORT/boot_status.md" research/3.12/results/
-          for file in "$REPORT/runtime_evidence.json" "$REPORT/runtime_evidence.md"; do
+          for file in "$REPORT/runtime_evidence.json" "$REPORT/runtime_evidence.md" \
+                      "$REPORT/native_ex_features.json" "$REPORT/native_ex_features.md"; do
             [[ ! -f "$file" ]] || cp "$file" research/3.12/results/
           done
           python - <<'PY'
@@ -238,7 +287,8 @@ jobs:
           p=pathlib.Path('source-manifest.json')
           d=json.loads(p.read_text())
           for f in pathlib.Path('research/3.12/results').glob('*'):
-              if f.name not in ('boot_status.json','boot_status.md','runtime_evidence.json','runtime_evidence.md'):
+              if f.name not in ('boot_status.json','boot_status.md','runtime_evidence.json','runtime_evidence.md',
+                                  'native_ex_features.json','native_ex_features.md'):
                   continue
               d['files'][f.as_posix()]=hashlib.sha256(f.read_bytes()).hexdigest()
           p.write_text(json.dumps(d,indent=2)+'\n')
@@ -246,7 +296,8 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add research/3.12/results/boot_status.* source-manifest.json
-          for file in research/3.12/results/runtime_evidence.*; do
+          for file in research/3.12/results/runtime_evidence.* \
+                      research/3.12/results/native_ex_features.*; do
             [[ ! -f "$file" ]] || git add "$file"
           done
           git diff --cached --quiet || { git commit -m 'research: record Z8 C3.12 bounded QEMU boot evidence'; git push origin HEAD:3.12; }
