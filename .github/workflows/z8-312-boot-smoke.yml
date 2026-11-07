@@ -9,6 +9,7 @@ on:
       - 'tools/boot_z8.py'
       - 'tools/z8_research_sites.py'
       - 'research/3.12/profiles/3.12.json'
+      - 'research/3.12/ci/verify_runtime_evidence.py'
 
 permissions:
   contents: write
@@ -194,6 +195,18 @@ jobs:
           print(json.dumps(report,indent=2)[:2500])
           PY
 
+      - name: Strictly validate actual ADC lens and framebuffer guest evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s "$FW/boot311/result.json"
+          test -s "$FW/boot312/result.json"
+          python research/3.12/ci/verify_runtime_evidence.py \
+            --old "$FW/boot311/result.json" \
+            --new "$FW/boot312/result.json" \
+            --out "$REPORT"
+
       - name: Upload bounded text diagnostics only
         if: always()
         uses: actions/upload-artifact@v4
@@ -217,15 +230,23 @@ jobs:
           git checkout -B boot-report origin/3.12
           mkdir -p research/3.12/results
           cp "$REPORT/boot_status.json" "$REPORT/boot_status.md" research/3.12/results/
+          for file in "$REPORT/runtime_evidence.json" "$REPORT/runtime_evidence.md"; do
+            [[ ! -f "$file" ]] || cp "$file" research/3.12/results/
+          done
           python - <<'PY'
           import hashlib,json,pathlib
           p=pathlib.Path('source-manifest.json')
           d=json.loads(p.read_text())
-          for f in pathlib.Path('research/3.12/results').glob('boot_status.*'):
+          for f in pathlib.Path('research/3.12/results').glob('*'):
+              if f.name not in ('boot_status.json','boot_status.md','runtime_evidence.json','runtime_evidence.md'):
+                  continue
               d['files'][f.as_posix()]=hashlib.sha256(f.read_bytes()).hexdigest()
           p.write_text(json.dumps(d,indent=2)+'\n')
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add research/3.12/results/boot_status.* source-manifest.json
+          for file in research/3.12/results/runtime_evidence.*; do
+            [[ ! -f "$file" ]] || git add "$file"
+          done
           git diff --cached --quiet || { git commit -m 'research: record Z8 C3.12 bounded QEMU boot evidence'; git push origin HEAD:3.12; }
