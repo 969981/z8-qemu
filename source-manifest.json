@@ -274,7 +274,7 @@
     "tools/z8_global1_boundary_input.py": "df028d999089395ed30832caf2b9835c9a9611c6bbef7c313c143b19660fea95",
     "tools/z8_navigation_input.py": "817bb0d5b7ff10785cf938288ddb589a0ba19bda83bb7635f49f306e2d844173",
     "research/3.12/README.md": "7b1c812a39319597759c805f0db1e5f226e59b48f091a149ca401fa6abed8066",
-    "research/3.12/Z8_3.12_\u56fa\u4ef6\u7ed3\u6784\u5206\u6790.md": "74fa0fd4384442ccf9a83e0f99d3362e9a1314b7d38e2fcc85a03d031df351c4",
+    "research/3.12/Z8_3.12_固件结构分析.md": "74fa0fd4384442ccf9a83e0f99d3362e9a1314b7d38e2fcc85a03d031df351c4",
     "research/3.12/Z8_v3.12_initramfs_manifest.csv": "279a9e8ddebf06f35125c6f202c44d11a06e9de04696c9116716685d90da5001",
     "research/3.12/Z8_v3.12_probe.json": "691880a8872173930f64fcd9940a5fc3f000d14f02cd8477291972027c5b6923",
     "research/3.12/unpack_li.py": "68c5e62ca85bb35fe0ecec78662440722ba9424bbf699a2b7f53ae30e2ebf167",
@@ -285,7 +285,7 @@
     "research/3.12/ci/compare_z8.py": "3651e351b647deb3130e3b7307a5ca78c17f417baa283e7672271a3dee8db3f8",
     "research/3.12/results/comparison.json": "b23809f4f6f51b8b84436b496b56aa1c9710a7746b6761c54e43d1b18ff0267e",
     "research/3.12/results/comparison.md": "fd922c9173178a2c00b969c63ec9c40314d76b9283457d88d2f9183c55b24be5",
-    ".github/workflows/z8-312-boot-smoke.yml": "8b86778d7729d1f2e149e7bdc4bcc27acfc846e28559d292dc5ee9509ce13d7c",
+    ".github/workflows/z8-312-boot-smoke.yml": "070b7b3b37a00016637aaab48e968aa8e8ae6f2e5f7f541bcaab4d3bb9d397b2",
     "research/3.12/results/arm64_triage.json": "64d5cf909982d42ace6602e2e1f84daf761220b07c022cd5eb5ced7f0502f1e3",
     "research/3.12/results/arm64_triage.md": "209cafbc798a832479fafe2efa6107237bbedf1213d47ae0333f28a088bcb730",
     "research/3.12/ci/inspect_arm64.py": "66c7f8e242c5625e5e8db7089e31be5b227b4d5dbe6efcaf932bf0657da7cb8b",
@@ -302,7 +302,9 @@
     "research/3.12/ci/verify_runtime_evidence.py": "db59a3c73c005c5f88163ee99370433f04eaf565114dd3e3a36d9bd453fb446d",
     "tests/test_z8_runtime_evidence.py": "617a7de6de157f78c15f1aae42d55313094ad839c4fcecada11c650b307b9235",
     "research/3.12/ci/summarize_native_features.py": "6ca092d3f1b5a7d7a15bdc0f20ed30bd9ab93c816cd50f55bafd542cb124db35",
-    "tests/test_z8_native_features.py": "4b19ce2fced2afbf7dbd9e6f18f0408b04f67eb0bbba78c1268c3a7debb933b0"
+    "tests/test_z8_native_features.py": "4b19ce2fced2afbf7dbd9e6f18f0408b04f67eb0bbba78c1268c3a7debb933b0",
+    "research/3.12/ci/summarize_still_capture.py": "98bc0c65f2a81ac4018a04ee63b4d76a835302213299f7575be63eb395ffc121",
+    "tests/test_z8_still_capture_evidence.py": "1f02b11b756bf4ab24ae511ef637df8e0b1ce18fa0c0aa82511a00e044a228d9"
   },
   "schema": 1,
   "scope": "Z8 emulator sources, tools, tests and documentation",
