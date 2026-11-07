@@ -9,12 +9,14 @@
   "original_ex_mcu_communication_qualified": false,
   "original_mcu_firmware_used": true,
   "host_mcu_replies_disabled": true,
-  "delivered_contacts": 2,
+  "delivered_contacts": 0,
   "movie_selector_contact_delivered": false,
   "photo_selector_return_contact_delivered": false,
+  "movie_ui_mode_observed": false,
+  "photo_ui_return_observed": false,
   "original_ex_final_state": {
-    "main_frames": 419,
-    "mcu_frames": 411,
+    "main_frames": 266,
+    "mcu_frames": 263,
     "bad_frames": 0
   },
   "movie_model_counters": {
@@ -27,14 +29,14 @@
     "prior_video_program_known": false,
     "retained_starts": 0
   },
-  "first_raw_frames": 288,
+  "first_raw_frames": 88,
   "raw_frames_after_photo_return": null,
-  "last_virtual_seconds": 18.484545889,
+  "last_virtual_seconds": 11.815355223,
   "observed_ui_modes": [
     0,
     6
   ],
-  "harness_checks": 208,
+  "harness_checks": 57,
   "harness_checks_failed": 0,
   "guest_error": null
 }

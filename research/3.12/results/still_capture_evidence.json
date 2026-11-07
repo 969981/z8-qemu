@@ -1,0 +1,24 @@
+{
+  "test": "C3.12-host-peer-experimental-single-lossless-photo",
+  "exit_code": 1,
+  "guest_receipt_exists": true,
+  "card_exists": true,
+  "exfat_catalog_valid": true,
+  "guest_created_nef": false,
+  "raw_pixels_independently_decoded": false,
+  "photo_capture_end_to_end_qualified": false,
+  "physical_shutter_synchronization_qualified": false,
+  "guest_error": "TimeoutError('native ADC breakpoint 0x41181504')",
+  "model_checks": 14,
+  "model_checks_failed": 0,
+  "virtual_card_written": true,
+  "guest_code_modified": false,
+  "files": [
+    {
+      "path": "NIKON001.DSC",
+      "bytes": 512
+    }
+  ],
+  "guest_nef_files": [],
+  "guest_still_write_observed": false
+}

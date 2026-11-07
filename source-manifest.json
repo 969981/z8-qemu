@@ -290,7 +290,7 @@
     "research/3.12/results/arm64_triage.md": "209cafbc798a832479fafe2efa6107237bbedf1213d47ae0333f28a088bcb730",
     "research/3.12/ci/inspect_arm64.py": "66c7f8e242c5625e5e8db7089e31be5b227b4d5dbe6efcaf932bf0657da7cb8b",
     "research/3.12/results/boot_status.md": "049195f69703c1111941bc93220328bd76f50d889a38b072f62e82074856cb12",
-    "research/3.12/results/boot_status.json": "a4620f60e3e4e32da08b6b70a96f36ab4c41754367ac4e3e18078cea7bb29e91",
+    "research/3.12/results/boot_status.json": "10aa479ef22161ed2c9d65a24216555c670b97924908f3c96b4826533261aec6",
     "research/3.12/profiles/3.11.json": "acf1f505ee432fc6180566b87da12355fa52211138b72b39c6531616eb5c30c4",
     "research/3.12/profiles/3.12.json": "3bd1fbd7a38931889687a8c63e9c259ccc51b334d3d53d80491840a2442b1ab0",
     "research/3.12/ci/relocate_sites.py": "3d6601d7156e03c1af4d947ca41f91783b3a7df4c0428f35f4cf97f11556a238",
@@ -306,10 +306,12 @@
     "research/3.12/ci/summarize_still_capture.py": "98bc0c65f2a81ac4018a04ee63b4d76a835302213299f7575be63eb395ffc121",
     "tests/test_z8_still_capture_evidence.py": "2efe1cc3cb432a6fd462d37080d8504de9f357d406668701c8492928b0c816a2",
     "research/3.12/FEATURE_VALIDATION.md": "95951f489c5f2968b1fee55f19aa6de22b720e3bb22d0ff2e81aadd3323400c7",
-    "research/3.12/results/native_ex_features.json": "6404891c2249e55ce0fea934130210804a2ff08d83bc7ba2dbae8eadbfb89408",
+    "research/3.12/results/native_ex_features.json": "3fc735bbcd333489f54f1b42811bf1ce684f04fa89b1c2c4a17f6c082a210063",
     "research/3.12/results/native_ex_features.md": "05cb5e635bf9c51a0cbaedf6a6c874b3b6335819d78fa18c9c12545a965bcc2e",
     "research/3.12/results/runtime_evidence.md": "295be35b1d6227d0a662ded34dcf146f8735994a041806bd8f586864aff9a6f4",
-    "research/3.12/results/runtime_evidence.json": "80f53c5bb8c247a0efe0e12e43dcbde022d4a9afbc6389d0a4a8f339aa46f4eb"
+    "research/3.12/results/runtime_evidence.json": "e086bf43cd2abd3d0eba87d6cb1bd902135340e4678ca6241854b73ab1392e3c",
+    "research/3.12/results/still_capture_evidence.json": "b510cd6318a76d5df4676de4903e96ffeb8e04d4d39c389eb966fb8e7b901450",
+    "research/3.12/results/still_capture_evidence.md": "a2d616bb90f88e9001f436630bbe7d76838e624a1a63abdbd8b54e7655660387"
   },
   "schema": 1,
   "scope": "Z8 emulator sources, tools, tests and documentation",
