@@ -304,7 +304,7 @@
     "research/3.12/ci/summarize_native_features.py": "bbe5217ac81215a1f448a9d00d7dbc59253e8860cf8f247b184efca114ab5ffc",
     "tests/test_z8_native_features.py": "4b19ce2fced2afbf7dbd9e6f18f0408b04f67eb0bbba78c1268c3a7debb933b0",
     "research/3.12/ci/summarize_still_capture.py": "98bc0c65f2a81ac4018a04ee63b4d76a835302213299f7575be63eb395ffc121",
-    "tests/test_z8_still_capture_evidence.py": "1f02b11b756bf4ab24ae511ef637df8e0b1ce18fa0c0aa82511a00e044a228d9",
+    "tests/test_z8_still_capture_evidence.py": "2efe1cc3cb432a6fd462d37080d8504de9f357d406668701c8492928b0c816a2",
     "research/3.12/FEATURE_VALIDATION.md": "95951f489c5f2968b1fee55f19aa6de22b720e3bb22d0ff2e81aadd3323400c7"
   },
   "schema": 1,
