@@ -3,34 +3,194 @@
   "firmware_version": "3.12",
   "engine_sha256": "ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867",
   "load_base": "0x40160000",
-  "qualification": "NOT-BOOT-QUALIFIED",
-  "policy": "Do not treat unverified static candidates as working breakpoints; resolve one stage at a time using observed runtime PC and register semantics.",
+  "qualification": "STATIC-CANDIDATES-NOT-RUNTIME-VERIFIED",
+  "policy": "Static evidence only. Use Z8_C312_SITE_PROFILE and Z8_C312_ALLOW_UNQUALIFIED_BOOT=1 for bounded research; never treat these as a production or camera-flashing profile.",
   "sites": {
-    "boot_entry": null,
-    "adc_ready": null,
-    "power_status": null,
-    "system_power_event": null,
-    "battery_callback": null,
-    "lens_controller_reply": null,
-    "menu_event_1": null,
-    "menu_event_2": null,
-    "menu_event_3": null,
-    "half_shutter_1": null,
-    "half_shutter_2": null,
-    "half_shutter_3": null,
-    "framebuffer_event": null,
-    "ui_event": null,
-    "gpio_rx_isr": null,
-    "gpio_tx_isr": null,
-    "rx_request": null,
-    "tx_request": null,
-    "serial_before_enable": null,
-    "serial_prefill": null,
-    "serial_drain": null,
-    "serial_rx_isr": null,
-    "rx_accepted": null,
-    "tx_complete": null,
-    "tx_ack": null,
-    "tx_final": null
+    "boot_entry": "0x40160000",
+    "adc_ready": "0x4033db98",
+    "power_status": "0x40d57a90",
+    "system_power_event": "0x40d67260",
+    "battery_callback": "0x4118156c",
+    "lens_controller_reply": "0x4106e6f8",
+    "menu_event_1": "0x40d66034",
+    "menu_event_2": "0x40d55da0",
+    "menu_event_3": "0x40d5eb7c",
+    "half_shutter_1": "0x40d271e4",
+    "half_shutter_2": "0x40d26d7c",
+    "half_shutter_3": "0x40d3003c",
+    "framebuffer_event": "0x40faca24",
+    "ui_event": "0x40d57118",
+    "gpio_rx_isr": "0x40c161f0",
+    "gpio_tx_isr": "0x40c161d8",
+    "rx_request": "0x40c934b4",
+    "tx_request": "0x40c930ec",
+    "serial_before_enable": "0x40c14a60",
+    "serial_prefill": "0x40c14a8c",
+    "serial_drain": "0x40c14ad0",
+    "serial_rx_isr": "0x40c14f10",
+    "rx_accepted": "0x40c935c8",
+    "tx_complete": "0x40c930f0",
+    "tx_ack": "0x40c931d8",
+    "tx_final": "0x40c93240"
+  },
+  "runtime_qualified": false,
+  "allow_research_probe": true,
+  "evidence": {
+    "boot_entry": {
+      "reference_pc": "0x40160000",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "adc_ready": {
+      "reference_pc": "0x4033DB98",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "power_status": {
+      "reference_pc": "0x40D57A90",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 82,
+      "shift": 0
+    },
+    "system_power_event": {
+      "reference_pc": "0x40D67260",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "battery_callback": {
+      "reference_pc": "0x41181504",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 54,
+      "shift": 104
+    },
+    "lens_controller_reply": {
+      "reference_pc": "0x4106E690",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 70,
+      "shift": 104
+    },
+    "menu_event_1": {
+      "reference_pc": "0x40D66034",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "menu_event_2": {
+      "reference_pc": "0x40D55DA0",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 84,
+      "shift": 0
+    },
+    "menu_event_3": {
+      "reference_pc": "0x40D5EB7C",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "half_shutter_1": {
+      "reference_pc": "0x40D271E4",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 75,
+      "shift": 0
+    },
+    "half_shutter_2": {
+      "reference_pc": "0x40D26D7C",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 95,
+      "shift": 0
+    },
+    "half_shutter_3": {
+      "reference_pc": "0x40D3003C",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "framebuffer_event": {
+      "reference_pc": "0x40FAC9BC",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 86,
+      "shift": 104
+    },
+    "ui_event": {
+      "reference_pc": "0x40D57118",
+      "status": "two_sided_anchor_candidate",
+      "anchors": 87,
+      "shift": 0
+    },
+    "gpio_rx_isr": {
+      "reference_pc": "0x40C161F0",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "gpio_tx_isr": {
+      "reference_pc": "0x40C161D8",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "rx_request": {
+      "reference_pc": "0x40C934B4",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "tx_request": {
+      "reference_pc": "0x40C930EC",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "serial_before_enable": {
+      "reference_pc": "0x40C14A60",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "serial_prefill": {
+      "reference_pc": "0x40C14A8C",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "serial_drain": {
+      "reference_pc": "0x40C14AD0",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "serial_rx_isr": {
+      "reference_pc": "0x40C14F10",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "rx_accepted": {
+      "reference_pc": "0x40C935C8",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "tx_complete": {
+      "reference_pc": "0x40C930F0",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "tx_ack": {
+      "reference_pc": "0x40C931D8",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    },
+    "tx_final": {
+      "reference_pc": "0x40C93240",
+      "status": "byte_identical",
+      "anchors": 0,
+      "shift": 0
+    }
   }
 }
