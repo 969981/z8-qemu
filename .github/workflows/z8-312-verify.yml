@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/z8-312-verify.yml'
       - 'research/3.12/ci/**'
+      - 'research/3.12/profiles/3.11.json'
 
 permissions:
   contents: write
@@ -112,6 +113,11 @@ jobs:
           python research/3.12/ci/inspect_arm64.py \
             --old "$RUNNER_TEMP/z8_0311.dec" \
             --new "$RUNNER_TEMP/z8_0312.dec" \
+            --out "$REPORT_DIR"
+          python research/3.12/ci/relocate_sites.py \
+            --old "$RUNNER_TEMP/z8_0311.dec" \
+            --new "$RUNNER_TEMP/z8_0312.dec" \
+            --profile research/3.12/profiles/3.11.json \
             --out "$REPORT_DIR"
 
       - name: Retain only text analysis, not firmware or decrypted payloads
