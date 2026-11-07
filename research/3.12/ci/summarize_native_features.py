@@ -62,6 +62,14 @@ def summarize(path: Path | None, exit_code: int | None) -> dict:
     presses = [x.get("value") for x in delivered if x.get("property") == "mcu-contacts"]
     saw_movie = "23.10=0" in presses
     saw_photo = "23.10=1" in presses
+    # A lever contact alone does not demonstrate the movie mode. Look at the
+    # original guest UI mode during the movie window and Photo after release.
+    observed_movie_mode = any(
+        20 <= x["virtual_seconds"] < 29 and x["ui_mode"] not in (None, 6)
+        for x in metrics)
+    observed_photo_return = any(
+        x["virtual_seconds"] >= 38 and x["ui_mode"] == 6
+        for x in metrics)
     before_movie = max((x["raw_frames"] for x in metrics
                        if x["virtual_seconds"] < 20 and isinstance(x["raw_frames"], int)), default=None)
     after_photo = max((x["raw_frames"] for x in metrics
@@ -72,6 +80,8 @@ def summarize(path: Path | None, exit_code: int | None) -> dict:
         "delivered_contacts": len(delivered),
         "movie_selector_contact_delivered": saw_movie,
         "photo_selector_return_contact_delivered": saw_photo,
+        "movie_ui_mode_observed": observed_movie_mode,
+        "photo_ui_return_observed": observed_photo_return,
         "original_ex_final_state": {k: v for k,v in exstate.items()
                                     if k in ("frames","bad_frames","main_frames","mcu_frames","checksum_errors",
                                              "tx_frames","rx_frames","main_nonidle","mcu_nonidle")},
@@ -93,7 +103,7 @@ def summarize(path: Path | None, exit_code: int | None) -> dict:
     record["mode_recovery_qualified"] = bool(
         record["original_ex_mcu_communication_qualified"] and saw_movie and saw_photo
         and before_movie is not None and after_photo is not None
-        and after_photo > before_movie)
+        and after_photo > before_movie and observed_movie_mode and observed_photo_return)
     # A successful mode recovery is NOT evidence of video-encoded output or NEF.
     return record
 
