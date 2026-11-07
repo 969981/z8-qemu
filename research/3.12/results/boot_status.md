@@ -7,8 +7,8 @@ No guest instructions were patched, and no real camera is involved.
 | Test | Exit status | Finished smoke? |
 | --- | ---: | --- |
 | C3.11 | 0 | True |
-| C3.12 | 1 | False |
+| C3.12 | 0 | True |
 
-Qualified headless smoke in this runner: **False**.
+Qualified headless smoke in this runner: **True**.
 
 Exit 124 means timeout. A failed smoke may be caused by hardcoded C3.11 boot breakpoints, Linux host differences, or missing hardware emulation; examine test logs before attributing it to the firmware.
