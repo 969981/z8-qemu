@@ -32,7 +32,11 @@ def observe(g,points):
             if 'Z8_UNKNOWN' in g.log():raise RuntimeError('Unmodeled hardware access during boot')
             for cpu in range(4):
                 pc=int(re.search(r'\bPC=([0-9a-fA-F]+)',g.qmp.hmp('info registers',cpu))[1],16)
-                if pc in pending:g.rsp(f'z1,{pc:x},4');pending.remove(pc)
+                if pc in pending:
+                    # Actual halted vCPU PC, not a static-disassembler prediction.
+                    g.data.setdefault('boot_callback_hits', []).append(
+                        {'pc':hex(pc),'cpu':cpu,'from':'qmp-info-registers'})
+                    g.rsp(f'z1,{pc:x},4');pending.remove(pc)
         if pending:raise TimeoutError('Original boot callbacks missing: '+str(sorted(pending)))
     finally:
         for pc in pending:g.rsp(f'z1,{pc:x},4')
@@ -54,9 +58,15 @@ def boot(g,progress=print):
         if wire[0]==13 and wire[8] in (1,2,3,4):
             body=bytearray(16);body[0]=0x80|wire[8];body[4]=wire[12]
             deliver(g,frames(body,family=13)[0],prefix=f'boot-lens-{index:02d}-')
-            _,r=at(g,research_pc(g,'lens_controller_reply',0x4106e690))
+            lens_pc=research_pc(g,'lens_controller_reply',0x4106e690)
+            cpu,r=at(g,lens_pc)
             payload=g.read_bytes(r['X01'],8)
-            g.check('original lens controller accepts reply',struct.unpack_from('<I',payload)[0]==0)
+            status=struct.unpack_from('<I',payload)[0]
+            g.data.setdefault('lens_reply_evidence',[]).append({
+                'runtime_pc':hex(lens_pc),'cpu':cpu,'status_word':status,
+                'completion_byte':payload[4],
+                'reply_bytes':len(payload),'mode':'synthetic-mcu-frame'})
+            g.check('original lens controller accepts reply',status==0)
             if payload[4]==0:break
     else:raise RuntimeError('Lens controller startup did not complete')
     observe(g,tuple(research_pc(g,n,p) for n,p in (('menu_event_1',0x40d66034),('menu_event_2',0x40d55da0),('menu_event_3',0x40d5eb7c))))
