@@ -13,6 +13,7 @@ from receive_mcu_tx import receive
 from mcu_frames import frames,status_body
 from probe_adc_capture import at
 from probe_tasks import settle
+from z8_research_sites import pc as research_pc
 
 def key_body(menu=False,half=False,shooting_mode="photo"):
     if shooting_mode not in ("photo", "movie"): raise ValueError("Expected photo or movie")
@@ -38,29 +39,29 @@ def observe(g,points):
 
 def boot(g,progress=print):
     progress('Booting original firmware')
-    g.rsp('z1,40160000,4');at(g,0x4033db98)
+    g.rsp('z1,40160000,4');at(g,research_pc(g,'adc_ready',0x4033db98))
     deliver(g,frames(status_body({0x1c:2}))[0],prefix='power-')
-    _,r=at(g,0x40d57a90)
+    _,r=at(g,research_pc(g,'power_status',0x40d57a90))
     g.check('original power status accepted',r['X01']==0x03040002)
-    _,r=at(g,0x40d67260)
+    _,r=at(g,research_pc(g,'system_power_event',0x40d67260))
     g.check('original system power event',r['X00']==0x05020101)
     settle(g,1)
     body=bytearray(112);body[0]=3
     deliver(g,frames(body,family=4)[0],prefix='battery-')
-    at(g,0x41181504)
+    at(g,research_pc(g,'battery_callback',0x41181504))
     for index in range(32):
         wire=receive(g,prefix=f'boot-out-{index:02d}-')
         if wire[0]==13 and wire[8] in (1,2,3,4):
             body=bytearray(16);body[0]=0x80|wire[8];body[4]=wire[12]
             deliver(g,frames(body,family=13)[0],prefix=f'boot-lens-{index:02d}-')
-            _,r=at(g,0x4106e690)
+            _,r=at(g,research_pc(g,'lens_controller_reply',0x4106e690))
             payload=g.read_bytes(r['X01'],8)
             g.check('original lens controller accepts reply',struct.unpack_from('<I',payload)[0]==0)
             if payload[4]==0:break
     else:raise RuntimeError('Lens controller startup did not complete')
-    observe(g,(0x40d66034,0x40d55da0,0x40d5eb7c))
+    observe(g,tuple(research_pc(g,n,p) for n,p in (('menu_event_1',0x40d66034),('menu_event_2',0x40d55da0),('menu_event_3',0x40d5eb7c))))
     deliver(g,frames(key_body(half=True),family=2)[0],prefix='boot-key-')
-    observe(g,(0x40d271e4,0x40d26d7c,0x40d3003c,0x40fac9bc,0x40d57118))
+    observe(g,tuple(research_pc(g,n,p) for n,p in (('half_shutter_1',0x40d271e4),('half_shutter_2',0x40d26d7c),('half_shutter_3',0x40d3003c),('framebuffer_event',0x40fac9bc),('ui_event',0x40d57118))))
     body=bytearray(16);body[0]=1
     deliver(g,frames(body,family=9)[0],prefix='boot-ccomp-')
     progress('Starting original display and functional sensor input')
