@@ -11,6 +11,7 @@ on:
       - 'research/3.12/profiles/3.12.json'
       - 'research/3.12/ci/verify_runtime_evidence.py'
       - 'research/3.12/ci/summarize_native_features.py'
+      - 'research/3.12/ci/summarize_still_capture.py'
 
 permissions:
   contents: write
@@ -45,7 +46,7 @@ jobs:
           sudo apt-get install -y -qq ninja-build pkg-config build-essential python3-venv \
             libglib2.0-dev libpixman-1-dev libfdt-dev zlib1g-dev libjpeg-dev \
             libx264-dev libx265-dev libavcodec-dev libavutil-dev libslirp-dev \
-            libcapstone-dev
+            libcapstone-dev exfatprogs
           python -m pip install -r requirements.txt 'numpy==2.2.6'
 
       - name: Acquire firmware inputs and fully CRC-verify Z8 engines
@@ -204,6 +205,45 @@ jobs:
             --exit-code "$code" \
             --out "$REPORT"
 
+      - name: Independent C3.12 guest card-backed lossless NEF photo experiment
+        shell: bash
+        run: |
+          set +e
+          python tools/make_cmos.py --capture --output "$FW/capture-sensor14.raw" \
+            > "$REPORT/photo312-setup.log" 2>&1 &&
+          python tools/make_card.py --output "$FW/capture-blank-card.raw" \
+            >> "$REPORT/photo312-setup.log" 2>&1 &&
+          timeout 480s python tools/capture.py \
+            --firmware "$FW/eg_0312.bi" \
+            --qemu "$QEMU_BUILD/qemu-system-aarch64" \
+            --raw "$FW/capture-sensor14.raw" \
+            --card-template "$FW/capture-blank-card.raw" \
+            --output "$FW/photo312" \
+            --seconds 300 --settle 90 \
+            --experimental-preparation-profile \
+            --experimental-capture-selector5 \
+            --experimental-timed-single \
+            --menu-actions 'menu,down,down,down,down,down,down,down,down,down,down,ok,up,ok,menu,menu' \
+            > "$REPORT/photo312.log" 2>&1
+          code=$?
+          echo "$code" > "$REPORT/photo312.exit"
+          echo "C3.12 guest NEF experiment exit: $code (RAW decoding remains a separate gate)"
+          exit 0
+
+      - name: Summarize independent guest-written NEF evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          code=125
+          if [[ -f "$REPORT/photo312.exit" ]]; then
+            code="$(cat "$REPORT/photo312.exit")"
+          fi
+          python research/3.12/ci/summarize_still_capture.py \
+            --receipt "$FW/photo312/result.json" \
+            --card "$FW/photo312/capture-card.raw" \
+            --exit-code "$code" --out "$REPORT"
+
       - name: Produce bounded, unqualified-by-default boot results
         if: always()
         shell: bash
@@ -279,7 +319,8 @@ jobs:
           mkdir -p research/3.12/results
           cp "$REPORT/boot_status.json" "$REPORT/boot_status.md" research/3.12/results/
           for file in "$REPORT/runtime_evidence.json" "$REPORT/runtime_evidence.md" \
-                      "$REPORT/native_ex_features.json" "$REPORT/native_ex_features.md"; do
+                      "$REPORT/native_ex_features.json" "$REPORT/native_ex_features.md" \
+                      "$REPORT/still_capture_evidence.json" "$REPORT/still_capture_evidence.md"; do
             [[ ! -f "$file" ]] || cp "$file" research/3.12/results/
           done
           python - <<'PY'
@@ -288,7 +329,8 @@ jobs:
           d=json.loads(p.read_text())
           for f in pathlib.Path('research/3.12/results').glob('*'):
               if f.name not in ('boot_status.json','boot_status.md','runtime_evidence.json','runtime_evidence.md',
-                                  'native_ex_features.json','native_ex_features.md'):
+                                  'native_ex_features.json','native_ex_features.md',
+                                  'still_capture_evidence.json','still_capture_evidence.md'):
                   continue
               d['files'][f.as_posix()]=hashlib.sha256(f.read_bytes()).hexdigest()
           p.write_text(json.dumps(d,indent=2)+'\n')
@@ -297,7 +339,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add research/3.12/results/boot_status.* source-manifest.json
           for file in research/3.12/results/runtime_evidence.* \
-                      research/3.12/results/native_ex_features.*; do
+                      research/3.12/results/native_ex_features.* \
+                      research/3.12/results/still_capture_evidence.*; do
             [[ ! -f "$file" ]] || git add "$file"
           done
           git diff --cached --quiet || { git commit -m 'research: record Z8 C3.12 bounded QEMU boot evidence'; git push origin HEAD:3.12; }
