@@ -1,0 +1,69 @@
+{
+  "schema": "z8-c312-bounded-boot-evidence-v1",
+  "capture_or_video_claims": "NOT VALIDATED BY THIS SMOKE",
+  "c3_11": {
+    "version": "3.11",
+    "expected_engine_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+    "actual_firmware_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+    "firmware_identity_ok": true,
+    "runtime_qualified_profile_recorded": true,
+    "adc_pc": "0x41181504",
+    "adc_actual_hits": 1,
+    "lens_pc": "0x4106e690",
+    "lens_actual_hits": 2,
+    "lens_reply_count": 2,
+    "lens_valid_reply_count": 2,
+    "lens_reply_status_words": [
+      0,
+      0
+    ],
+    "lens_completion_bytes": [
+      1,
+      0
+    ],
+    "framebuffer_pc": "0x40fac9bc",
+    "framebuffer_qmp_confirmed_hits": 1,
+    "model_checks_total": 858,
+    "model_checks_failed": 0,
+    "raw_frames": 179,
+    "lcd_frames": 655,
+    "guest_error": null,
+    "bounded_boot_evidence_passed": true,
+    "still_photo_capture_qualified": false,
+    "video_recording_qualified": false,
+    "physical_lens_operation_qualified": false
+  },
+  "c3_12": {
+    "version": "3.12",
+    "expected_engine_sha256": "ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867",
+    "actual_firmware_sha256": "ec6f069e38f7bc4635fc7e6e9ae6304b3901953fadfdb9f33f011e4485b5b867",
+    "firmware_identity_ok": true,
+    "runtime_qualified_profile_recorded": true,
+    "adc_pc": "0x4118156c",
+    "adc_actual_hits": 1,
+    "lens_pc": "0x4106e6f8",
+    "lens_actual_hits": 2,
+    "lens_reply_count": 2,
+    "lens_valid_reply_count": 2,
+    "lens_reply_status_words": [
+      0,
+      0
+    ],
+    "lens_completion_bytes": [
+      1,
+      0
+    ],
+    "framebuffer_pc": "0x40faca24",
+    "framebuffer_qmp_confirmed_hits": 1,
+    "model_checks_total": 852,
+    "model_checks_failed": 0,
+    "raw_frames": 174,
+    "lcd_frames": 650,
+    "guest_error": null,
+    "bounded_boot_evidence_passed": true,
+    "still_photo_capture_qualified": false,
+    "video_recording_qualified": false,
+    "physical_lens_operation_qualified": false
+  },
+  "bounded_both_versions_pass": true
+}

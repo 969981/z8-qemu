@@ -586,39 +586,11 @@
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
         "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
       {
         "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
       {
@@ -631,6 +603,14 @@
       },
       {
         "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
       {
@@ -686,202 +666,6 @@
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
         "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
@@ -899,6 +683,202 @@
       },
       {
         "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
       {
@@ -1182,7 +1162,23 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -1446,170 +1442,6 @@
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
         "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
@@ -1630,63 +1462,11 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
         "name": "continuous native MCU reads ACK high",
         "passed": true
       },
       {
         "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -1863,6 +1643,206 @@
       },
       {
         "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -2002,18 +1982,6 @@
         "passed": true
       },
       {
-        "name": "continuous MCU supplied frame reaches original RX buffer",
-        "passed": true
-      },
-      {
-        "name": "continuous RX clocks original TX bytes",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
         "name": "continuous MCU TX wire matches original buffer and checksum",
         "passed": true
       },
@@ -2046,19 +2014,11 @@
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "continuous MCU supplied frame reaches original RX buffer",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "continuous RX clocks original TX bytes",
         "passed": true
       },
       {
@@ -2122,7 +2082,23 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -2179,6 +2155,30 @@
       },
       {
         "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -2299,26 +2299,6 @@
       },
       {
         "name": "continuous RX clocks original TX bytes",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -2962,118 +2942,6 @@
         "passed": true
       },
       {
-        "name": "continuous MCU supplied frame reaches original RX buffer",
-        "passed": true
-      },
-      {
-        "name": "continuous RX clocks original TX bytes",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
         "name": "continuous MCU TX wire matches original buffer and checksum",
         "passed": true
       },
@@ -3122,27 +2990,83 @@
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU TX wire matches original buffer and checksum",
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "continuous native MCU serial TX returns success",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous native MCU reads ACK high",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -3158,6 +3082,158 @@
         "passed": true
       },
       {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
         "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
@@ -3179,6 +3255,130 @@
       },
       {
         "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -3214,206 +3414,6 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
         "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
@@ -3435,22 +3435,6 @@
       },
       {
         "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -4026,6 +4010,26 @@
         "passed": true
       },
       {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
         "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
@@ -4122,26 +4126,6 @@
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
         "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
@@ -4335,26 +4319,6 @@
       },
       {
         "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -4638,6 +4602,26 @@
         "passed": true
       },
       {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
         "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
@@ -4747,182 +4731,6 @@
       },
       {
         "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -5254,54 +5062,6 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
         "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
@@ -5322,95 +5082,207 @@
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous RX clocks original TX bytes",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -5490,18 +5362,6 @@
         "passed": true
       },
       {
-        "name": "continuous MCU supplied frame reaches original RX buffer",
-        "passed": true
-      },
-      {
-        "name": "continuous RX clocks original TX bytes",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
         "name": "continuous MCU TX wire matches original buffer and checksum",
         "passed": true
       },
@@ -5555,174 +5415,6 @@
       },
       {
         "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -5890,107 +5582,103 @@
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous RX clocks original TX bytes",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous RX clocks original TX bytes",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU serial TX returns success",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -6014,63 +5702,11 @@
         "passed": true
       },
       {
-        "name": "continuous MCU request retains original serial channel",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -6110,11 +5746,51 @@
         "passed": true
       },
       {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
         "name": "continuous MCU supplied frame reaches original RX buffer",
         "passed": true
       },
       {
         "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -6562,6 +6238,18 @@
         "passed": true
       },
       {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
         "name": "continuous MCU TX wire matches original buffer and checksum",
         "passed": true
       },
@@ -6578,23 +6266,123 @@
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "continuous MCU TX wire matches original buffer and checksum",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous native MCU serial TX returns success",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous native MCU reads ACK high",
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {
@@ -6610,6 +6398,206 @@
         "passed": true
       },
       {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX wire matches original buffer and checksum",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU serial TX returns success",
+        "passed": true
+      },
+      {
+        "name": "continuous native MCU reads ACK high",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU TX retires through original driver",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
         "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
@@ -6618,15 +6606,19 @@
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "channel-9 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "continuous MCU request retains original serial channel",
         "passed": true
       },
       {
@@ -6638,7 +6630,27 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "continuous MCU supplied frame reaches original RX buffer",
+        "passed": true
+      },
+      {
+        "name": "continuous RX clocks original TX bytes",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
       {
@@ -6674,7 +6686,7 @@
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
+        "name": "channel-9 clock transmits exact original words",
         "passed": true
       },
       {
@@ -6682,71 +6694,7 @@
         "passed": true
       },
       {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
         "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
       {
@@ -6810,7 +6758,71 @@
         "passed": true
       },
       {
-        "name": "channel-9 clock transmits exact original words",
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
+        "passed": true
+      },
+      {
+        "name": "channel-8 clock transmits exact original words",
         "passed": true
       },
       {
@@ -6839,54 +6851,6 @@
       },
       {
         "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "channel-9 clock transmits exact original words",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU request retains original serial channel",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX wire matches original buffer and checksum",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU serial TX returns success",
-        "passed": true
-      },
-      {
-        "name": "continuous native MCU reads ACK high",
-        "passed": true
-      },
-      {
-        "name": "continuous MCU TX retires through original driver",
         "passed": true
       },
       {

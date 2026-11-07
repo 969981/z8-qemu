@@ -1,0 +1,40 @@
+{
+  "scope": "experimental-original-ex-native-communication-and-mode-recovery",
+  "exit_code": 0,
+  "test_receipt_exists": true,
+  "still_nef_file_qualified": false,
+  "encoded_movie_file_qualified": false,
+  "physical_lens_af_qualified": false,
+  "mode_recovery_qualified": false,
+  "original_ex_mcu_communication_qualified": false,
+  "original_mcu_firmware_used": true,
+  "host_mcu_replies_disabled": true,
+  "delivered_contacts": 2,
+  "movie_selector_contact_delivered": false,
+  "photo_selector_return_contact_delivered": false,
+  "original_ex_final_state": {
+    "main_frames": 419,
+    "mcu_frames": 411,
+    "bad_frames": 0
+  },
+  "movie_model_counters": {
+    "enabled": true,
+    "capture_control_enabled": true,
+    "pixel_bytes": 0,
+    "completion_events": 0,
+    "video_control_enabled": true,
+    "retained_start_enabled": false,
+    "prior_video_program_known": false,
+    "retained_starts": 0
+  },
+  "first_raw_frames": 288,
+  "raw_frames_after_photo_return": null,
+  "last_virtual_seconds": 18.484545889,
+  "observed_ui_modes": [
+    0,
+    6
+  ],
+  "harness_checks": 208,
+  "harness_checks_failed": 0,
+  "guest_error": null
+}
