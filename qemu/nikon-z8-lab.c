@@ -1,6 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-2.0-or-later
  * Copyright (C) 2026 RdWing
+ * Copyright (C) 2026 GoldJohnKing: register-dump read-through.
  * Copyright (C) 2026 GoldJohnKing: EXS glue-block access trace.
  * Nikon Z8 C3.11 functional board. Experimental, not a hardware specification.
  * Z8 scope and synthetic-input assumptions: ../README.md.
