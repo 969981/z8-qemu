@@ -265,7 +265,7 @@
         "tools/runtime.py": "b02e64be06be4bbfa781ee50e2e5c899fd13898e86f8015652b8c3e5eb18eaf8",
         "tools/service_serial8.py": "2680b66091d6bc85d239e88176a382f109c757e7ecd58eac1296869ebba6ee74",
         "tools/service_z8_mcu.py": "8a748a10bb665a9b5eb7115656ead1058f972146a22c926f1be9f1418512fb3f",
-        "tools/stream.py": "cb466460a9f1b063bb1765efd373774210eadbe0ce59449084a4b38fd116215e",
+        "tools/stream.py": "6eded1c13c4dcb4bcfb9d97438bd2cd37f335428263caea822b1e8ace26a380e",
         "tools/trace_plugin.py": "8eb03f5a1f7338587c040a2e9d36ce5dc946fc306a4733eb327870e748e222dd",
         "tools/transition_peer.py": "ec6709e32104a8c749914fa1e0a032552703f03286e0702a15f28447b00df4f9",
         "tools/virtual_card.py": "edb1bafdb02b4fde3ed11f74a81166e7663885dd1b6908b554bb050fc4f1748e",
@@ -274,7 +274,9 @@
         "tools/virtual_recording_card.py": "de2f8322d4fbcc4a63b80fa32bbe98370a13cf1214ed395b95cf3dfcb9c9ddd3",
         "tools/z8_global1_boundary_input.py": "df028d999089395ed30832caf2b9835c9a9611c6bbef7c313c143b19660fea95",
         "tools/z8_navigation_input.py": "817bb0d5b7ff10785cf938288ddb589a0ba19bda83bb7635f49f306e2d844173",
-        "tests/check_syscon_semaphore.py": "a8a47ea5aa47ea0b22861d7a96d933bc07de6ddeab50438a8e5dc50138f87dbf"
+        "tests/check_syscon_semaphore.py": "a8a47ea5aa47ea0b22861d7a96d933bc07de6ddeab50438a8e5dc50138f87dbf",
+        "tools/nav_sequence.py": "7a1f769263299d4763916dd81d08eaa126287e77013dddaccfb342a3593e5489",
+        "tests/test_nav_sequence.py": "671d23a1baefe6c236cc21428f83f3de7467a23a4bfc885a8aaae90f1ada9b5f"
     },
     "schema": 1,
     "scope": "Z8 emulator sources, tools, tests and documentation",
