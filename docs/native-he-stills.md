@@ -628,6 +628,10 @@ peripheral-only checks, or a new `.wav` path in an existing directory for
 repeatable host output. Existing files and symlinks are rejected. Desktop
 session configuration accepts the equivalent `movie_audio_output` field.
 The host queue is bounded to 2 MiB; unavailable output does not retire the DMA.
+Single-lane (unpaired) streams duplicate each sample to both channels of the
+stereo sink voice, so every guest sample reaches the file once at the declared
+48-kHz clock; `host_stream_channels` in the TX state reports the route of the
+last enqueued stream (0 before the first stream).
 The session's finite TX budget remains 16 MiB and 1,024 descriptors. Raw PCM
 capture is available only through an explicit diagnostic getter and is excluded
 from normal state snapshots. Keep captured audio private.
