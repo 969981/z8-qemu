@@ -23,7 +23,7 @@
         "docs/native-he-stills.md": "511f03b39ac6e8885d30c89a282c791af3d0366afd7b78b2a4009dce07ec3cf4",
         "docs/native-mcu.md": "12d5397da56f56e7aaef306d79ddab21c36189861954035268420178aa4b4ae7",
         "docs/repository-validation.json": "b9561bdef9df85f9ab30d0e78858860da462a716c5fa467943ce1320061cceb2",
-        "docs/testing.md": "238d4da628a52ed0802c2440f5cbf6bdc5b13054973d0592f826960cf9554b1c",
+        "docs/testing.md": "f5e7950b58d793b04fe82808362e762561d52973a53ed120d70c2ba162d0fce8",
         "docs/usage.md": "91aedb2c6e9a69e7de69017537a76d3087d1a0bdfd953ed37923672ebc9d031f",
         "docs/z63-backport.md": "9073d753ce4e5dd3e315be856456a1de6f001fe3a7822a6fef9a47d8e8c4b0b4",
         "docs/z63-source-map.json": "9079edafb8106ce0fbe835f5e3f77af975c40f8ed81a8258426ab308830f859f",
@@ -87,7 +87,7 @@
         "qemu/nikon-z8-jpeg-reset.h": "e324caeb0a830dec5c2c0782ac981cda57f0125aa0b42a04ddcfe310c037a2ae",
         "qemu/nikon-z8-jpeg.h": "3a650668b2abb1e61c9ae8b898747cddc00ab2eaab6ddcc22ad8fd15f7ef456d",
         "qemu/nikon-z8-jpegdec.h": "a2e848863e056272945faac6ecaa0a0b375659042c6b058aefeaf3be28d391b8",
-        "qemu/nikon-z8-lab.c": "dc4bf95d78e0fa6fe7551f27380b32ac8f22400780dfe2d1b5d67f3b9679cc35",
+        "qemu/nikon-z8-lab.c": "963b17b579cd37d97923d3b104c3564e7eb5275b060ce5b52623d2c09a2b2066",
         "qemu/nikon-z8-liveview-buffers.h": "db5aaab1fa55134de3d42baa6d8b5cc11953e89177c369300410aa2d416b6c8e",
         "qemu/nikon-z8-liveview-jpeg.h": "04d08bd5b9be7fecf85f2c0ca495cbbf5eb2339c726cac933ab4c7fc27e81957",
         "qemu/nikon-z8-lossless.h": "6f6ef0da9d01571dcf3470ccf1b160fb1c50c5859b6b70ef78d63b4bc97e9100",
@@ -273,7 +273,8 @@
         "tools/virtual_exfat_window.py": "7ab5047f3c3ef4b87b217163bc90186f3dbc667645e0e972dcf7ce6563882f34",
         "tools/virtual_recording_card.py": "de2f8322d4fbcc4a63b80fa32bbe98370a13cf1214ed395b95cf3dfcb9c9ddd3",
         "tools/z8_global1_boundary_input.py": "df028d999089395ed30832caf2b9835c9a9611c6bbef7c313c143b19660fea95",
-        "tools/z8_navigation_input.py": "817bb0d5b7ff10785cf938288ddb589a0ba19bda83bb7635f49f306e2d844173"
+        "tools/z8_navigation_input.py": "817bb0d5b7ff10785cf938288ddb589a0ba19bda83bb7635f49f306e2d844173",
+        "tests/check_syscon_semaphore.py": "a8a47ea5aa47ea0b22861d7a96d933bc07de6ddeab50438a8e5dc50138f87dbf"
     },
     "schema": 1,
     "scope": "Z8 emulator sources, tools, tests and documentation",

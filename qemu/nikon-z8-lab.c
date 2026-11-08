@@ -19778,7 +19778,14 @@ static void z8_service_trace_vdump(CPUState *cs, const char *label,
     for (unsigned off = 0; off < size; off += sizeof(chunk)) {
         unsigned n = MIN(sizeof(chunk), size - off);
         int ok = cpu_memory_rw_debug(cs, vaddr + off, chunk, n, false) == 0;
-        fprintf(stderr, "Z8_VDUMP %s +0x%x %s ", label, off, ok ? "ok" : "FAIL");
+        if (!ok) {
+            /* A failed read leaves chunk untouched (stale bytes from the
+             * previous line, or never-initialized stack on a first
+             * failure); print the failure alone, never payload bytes. */
+            fprintf(stderr, "Z8_VDUMP %s +0x%x FAIL\n", label, off);
+            continue;
+        }
+        fprintf(stderr, "Z8_VDUMP %s +0x%x ok ", label, off);
         for (unsigned i = 0; i < n; i++) {
             fprintf(stderr, "%02x", chunk[i]);
         }
